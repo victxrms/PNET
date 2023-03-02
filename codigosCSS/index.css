@@ -1,0 +1,51 @@
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: antiquewhite;
+}
+
+header nav{
+    justify-content: center;
+    flex-direction: column;
+}
+
+header .titulo{
+    font-size: 3em;
+    font-weight: bold;
+}
+
+header img{
+    max-width: 50%;
+}
+
+div #bannerPrincipal{
+    background-image: url('../recursos/imagenes/bannerPrincipal.png');
+    
+}
+
+div .boton{
+    background-color: white;
+    color: #FF7B54;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 1em;
+    
+}
+
+
+footer{
+    margin-top: 2em;
+}
+
+footer #footerUp{
+    display: flex;
+    justify-content: space-around;
+}
+
+footer ul{
+    list-style-type: none;
+}
+
+footer li{
+    display: inline;
+}
+
