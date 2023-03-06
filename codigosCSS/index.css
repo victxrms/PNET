@@ -19,13 +19,22 @@ header img{
     width: 4em;
 }
 
+hr {
+    border: none; 
+    border-bottom: 0.2em solid #FF7B54;
+    border-radius: 0.1em; 
+    margin-top: 0em;
+    margin-bottom: 1em;
+}
+
 #bannerPrincipal{
     justify-content: center;
     background-image: url('../recursos/imagenes/bannerPrincipal.png');
     height: auto;
     max-width: 1291px;
     min-height: 440px;
-    padding: 20px;
+    padding-top: 0.1em;
+    padding-left: 1em;
     
 }
 
@@ -84,6 +93,11 @@ footer{
     max-height: 1.5em;
     margin-left: 0.2em;
     align-self: center;
+}
+
+#footerBottom{
+    display: flex;
+    justify-content: left;
 }
 
 footer ul{
