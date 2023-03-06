@@ -80,8 +80,10 @@ footer{
     height: 1em;
 }
 
-#footerUp img{
-    margin-left: 0.5em;
+#footerUp .downloadButton{
+    max-height: 1.5em;
+    margin-left: 0.2em;
+    align-self: center;
 }
 
 footer ul{
@@ -91,5 +93,6 @@ footer ul{
 footer li{
     display: inline;
     font-weight: bold;
+    margin-left: 0.4em;
 }
 
