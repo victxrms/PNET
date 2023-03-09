@@ -75,14 +75,17 @@ div .boton{
     cursor: pointer;
 }
 
-#fechaForm{
+#Form{
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
     width: 80%;
     position: relative;
     margin-right: 2.6em;
 }
 
-#fechaFormInput{
+.inputHorFech{
+    margin-top: 1em;
     text-align: center;
     font-weight: bold;
     border-radius: 0.2em;
@@ -90,6 +93,29 @@ div .boton{
     padding: 0.5em;
     width: 100%;
     font-size: 1em;
+    margin-bottom: 2em;
+}
+
+#Form label{
+    font-size:small;
+}
+
+#Form div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#Form output{
+    margin-top: 1em;
+    vertical-align: middle;
+    display: none;
+}
+
+#numPersonasInput{
+    margin-top: 1em;
+    vertical-align: middle;
+    width: 100%;
 }
 
 div aside{
@@ -106,8 +132,6 @@ aside h3{
 aside p{
     margin-top: -1.5em;
 }
-
-
 
 footer{
     margin-top: 2em;

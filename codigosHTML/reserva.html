@@ -27,11 +27,19 @@
         <aside>
             <h3>Nombre sitio</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper magna enim, quis bibendum nisi vestibulum nec. Nulla faucibus posuere massa. Duis pellentesque consequat vehicula. Etiam egestas auctor neque in molestie. Morbi vel ligula velit.</p>
-            <form id="fechaForm">
-                <input type="date" id="fechaFormInput" name="reservaFecha" >
+            <form id="Form">
+               <label>Fecha</label><input type="date" class="inputHorFech"  id="fechaFormInput" name="reservaFecha">
+               <label>Hora inicial</label><input type="time" class="inputHorFech" id="horaInicioInput" name="reservaHora">
+               <label>Hora final</label><input type="time" class="inputHorFech" id="horaFinInput" name="reservaHora">
+               <label>Número de personas</label> 
+               <div>
+                <input type="range" id="numPersonasInput" min="0", max="10" value=max-min oninput="this.nextElementSibling.value = this.value">
+                <output id="outputNumPersonas"></output>  
+               </div>
+               
             </form>
             
-            <input class="boton" type="submit" form="fechaForm" value="¡Reserva ya!""></input>
+            <input class="boton" type="submit" form="Form" value="¡Reserva ya!""></input>
         </aside>
     </div>
 
