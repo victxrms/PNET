@@ -5,6 +5,7 @@
 <head>
     <link rel="stylesheet" href="../codigosCSS/reserva.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../codigosJS/reserva.js"></script>
     <title>Reserva tu camping</title>
 </head>
 
@@ -26,8 +27,11 @@
         <aside>
             <h3>Nombre sitio</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper magna enim, quis bibendum nisi vestibulum nec. Nulla faucibus posuere massa. Duis pellentesque consequat vehicula. Etiam egestas auctor neque in molestie. Morbi vel ligula velit.</p>
-            <div> Calendario </div>
-            <div class="boton"> <a>Reserva</a></div>
+            <form id="fechaForm">
+                <input type="date" id="fechaFormInput" name="reservaFecha" >
+            </form>
+            
+            <input class="boton" type="submit" form="fechaForm" value="¡Reserva ya!""></input>
         </aside>
     </div>
 

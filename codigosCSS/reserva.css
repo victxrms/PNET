@@ -3,6 +3,7 @@ body {
     font-family: Helvetica, sans-serif;
     background-color: white;
     max-width: 1291px;
+    
 }
 
 header nav{
@@ -55,21 +56,54 @@ hr {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    max-width: 20%;
+    max-width: 20em;
+    min-width: 15em;
     margin-left: 1em;
 }
 
-
-
 div .boton{
-    background-color: #FF7B54;
-    color: white;
-    text-decoration: none;
+    background: linear-gradient(90deg, #FF7B54 0%, #FFB26B 49%);
     border-radius: 10px;
-    padding: 1em;
+    color: white;
+    border: none;
+    padding: 1.5em;
     font-weight: bold;
-    display: block;
+    width: 100%;
+    margin-top: 1em;
+    font-size: 1em;
+    cursor: pointer;
 }
+
+#fechaForm{
+    margin: 0 auto;
+    width: 80%;
+    position: relative;
+    margin-right: 2.6em;
+}
+
+#fechaFormInput{
+    text-align: center;
+    font-weight: bold;
+    border-radius: 0.2em;
+    border-color: #FF7B54;
+    padding: 0.5em;
+    width: 100%;
+}
+
+div aside{
+    display: flex;
+    justify-content: left;
+    align-content: center;
+}
+
+aside h3{
+    font-size: 2em;
+}
+
+aside p{
+    margin-top: -1.5em;
+}
+
 
 
 footer{
