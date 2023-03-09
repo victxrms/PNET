@@ -40,6 +40,7 @@ hr {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 1em;
 }
 
 .imagenCamping > img{
@@ -66,11 +67,11 @@ div .boton{
     border-radius: 10px;
     color: white;
     border: none;
-    padding: 1.5em;
+    padding: 1em;
     font-weight: bold;
     width: 100%;
     margin-top: 1em;
-    font-size: 1em;
+    font-size: 1.2em;
     cursor: pointer;
 }
 
@@ -88,6 +89,7 @@ div .boton{
     border-color: #FF7B54;
     padding: 0.5em;
     width: 100%;
+    font-size: 1em;
 }
 
 div aside{
