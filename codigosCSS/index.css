@@ -10,9 +10,16 @@ header nav{
     flex-direction: column;
 }
 
+header > nav > a{
+    text-decoration: none;
+}
+
 header .titulo{
     font-size: 4em;
     font-weight: bold;
+    text-decoration: none; 
+    color: black;
+    cursor: pointer; 
 }
 
 header img{
@@ -109,5 +116,10 @@ footer li{
     display: inline;
     font-weight: bold;
     margin-left: 0.4em;
+}
+
+footer a{
+    text-decoration: none;
+    color: black;
 }
 
