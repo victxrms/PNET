@@ -93,11 +93,12 @@ div .boton{
 div aside{
     display: flex;
     justify-content: left;
-    align-content: center;
+    align-items: center;
 }
 
 aside h3{
     font-size: 2em;
+    align-self: flex-start;
 }
 
 aside p{
