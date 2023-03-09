@@ -2,6 +2,7 @@ body {
 
     font-family: Helvetica, sans-serif;
     background-color: white;
+    max-width: 1291px;
 }
 
 header nav{
@@ -32,7 +33,7 @@ hr {
     background-image: url('../recursos/imagenes/bannerPrincipal.png');
     height: auto;
     max-width: 1291px;
-    min-height: 440px;
+    min-height: 450px;
     padding-top: 0.1em;
     padding-left: 1em;
     
