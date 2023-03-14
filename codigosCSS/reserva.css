@@ -6,7 +6,10 @@ body {
     display: flex;
     flex-direction: column;
     margin: auto;
-    margin-top: 2em;
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
     
 }
 
@@ -45,6 +48,7 @@ hr {
     flex-wrap: wrap;
     justify-content: center;
     padding: 1em;
+    align-items: center;
 }
 
 .imagenCamping > img{
