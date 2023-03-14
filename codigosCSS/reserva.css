@@ -3,6 +3,10 @@ body {
     font-family: Helvetica, sans-serif;
     background-color: white;
     max-width: 1291px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 2em;
     
 }
 
