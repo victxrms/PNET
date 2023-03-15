@@ -1,6 +1,8 @@
 .divTarjetas{
-  position: relative;
-
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 100px; 
 }
 
 header .textonormal{
@@ -10,47 +12,21 @@ header .textonormal{
 }
 
 .sticky{
-  position: block-fixed;
+  position: fixed;
+  bottom: 0;
+  left: 1em;
+  width: 1291px;
+  background-color: white;
+  padding-bottom: 20px;
 }
 
 .card {
-  /*No tocar*/
-  --bs-card-spacer-y: 1rem;
-  --bs-card-spacer-x: 1rem;
-  --bs-card-title-spacer-y: 0.5rem;
-  --bs-card-title-color: ;
-  --bs-card-subtitle-color: ;
-  --bs-card-border-width: var(--bs-border-width);
-  --bs-card-border-color: var(--bs-border-color-translucent);
-  --bs-card-border-radius: var(--bs-border-radius);
-  --bs-card-box-shadow: ;
-  --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
-  --bs-card-cap-padding-y: 0.5rem;
-  --bs-card-cap-padding-x: 1rem;
-  --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
-  --bs-card-cap-color: ;
-  --bs-card-height: ;
-  --bs-card-color: ;
-  --bs-card-bg: var(--bs-body-bg);
-  --bs-card-img-overlay-padding: 1rem;
-  --bs-card-group-margin: 0.75rem;
-
-/*hasta aquí*/
-
   position: relative;
   display: inline-flex;
   align-items: flex-start;
-  margin-left: 2em;
   margin-top: 2em;
-  margin-right: 7em;
   flex-direction: column;
-  min-width: 0;
-  height: var(--bs-card-height);
-  word-wrap: break-word;
-  background-color: var(--bs-card-bg);
-  background-clip: border-box;
-  border: var(--bs-card-border-width) var(--bs-card-border-color);
-  border-radius: var(--bs-card-border-radius);
+  margin-right: 2em;
 }
 
 .card-img, .card-img-top {
@@ -58,10 +34,9 @@ header .textonormal{
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  height: 19em;
+  height: 20em;
   width: 22em;
   
-
 }
 
 .linea{
@@ -73,11 +48,9 @@ header .textonormal{
 .card-title{
   font-weight: bold;
   font-size: 1.2em;
-
 }
 
-.card-body {
-  flex: 1 1 auto;
-  padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
-  color: var(--bs-card-color);
+a{
+  text-decoration: none;
+  color: inherit;
 }
