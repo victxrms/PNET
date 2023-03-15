@@ -1,0 +1,67 @@
+<!-- Codigo del indice de la página -->
+<!-- Ubicacion del archivo: file:///Volumes/v.1TB/programacion/PNET/codigosHTML/index.html -->
+
+<!DOCTYPE HTML>
+<head>
+    <link rel="stylesheet" href="../codigosCSS/reserva.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../codigosJS/reserva.js"></script>
+    <title>Reserva tu camping</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a  href="index.html">
+                <img src="../recursos/imagenes/logoGrande.png"> 
+                <span class="titulo">Vivac</span>
+            </a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <div class="imagenCamping">
+        <img src="../recursos/imagenesSitios/fotoCampingNum6.jpg">
+
+        <aside>
+            <h3>Nombre sitio</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper magna enim, quis bibendum nisi vestibulum nec. Nulla faucibus posuere massa. Duis pellentesque consequat vehicula. Etiam egestas auctor neque in molestie. Morbi vel ligula velit.</p>
+            <form id="Form">
+               <label>Fecha</label><input type="date" class="inputHorFech"  id="fechaFormInput" name="reservaFecha">
+               <label>Hora inicial</label><input type="time" class="inputHorFech" id="horaInicioInput" name="reservaHora">
+               <label>Hora final</label><input type="time" class="inputHorFech" id="horaFinInput" name="reservaHora">
+               <label>Número de personas</label> 
+               <div>
+                <input type="range" id="numPersonasInput" min="0", max="10" value=max-min oninput="this.nextElementSibling.value = this.value">
+                <output id="outputNumPersonas"></output>  
+               </div>
+               
+            </form>
+            
+            <input class="boton" type="submit" form="Form" value="¡Reserva ya!""></input>
+        </aside>
+    </div>
+
+    
+
+    <footer>
+        <div id="footerUp">
+            <a href="../codigosHTML/index.html"><img src="../recursos/imagenes/logoGrande.png">Vivac</a>
+            <img class="downloadButton" src="../recursos/imagenes/appstore.png">
+            <img class="downloadButton" src="../recursos/imagenes/googleplay.png">
+            
+        </div>
+        <hr>
+        <nav id="footerBottom">
+                <li><a href="./salas.html">Lista de lugares</a></li>
+                <li><a href="./salas.html">Acampa</a></li>
+                <li><a href="./salas.html">Contáctanos</a></li>
+                <li><a href="./conocenos.html">Sobre nosotros</a></li>
+        </nav>
+        
+    </footer>
+</body>
+
+
+</html>
