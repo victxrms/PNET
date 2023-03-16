@@ -45,7 +45,8 @@ header .titulo{
     font-weight: bold;
     text-decoration: none; 
     color: black;
-    cursor: pointer; 
+    cursor: pointer;
+    display: inline; 
 }
 
 header img{
