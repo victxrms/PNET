@@ -8,6 +8,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
     formulario.max = fechaMax.toISOString().split("T")[0];
 
     let inputRange = document.getElementById('numPersonasInput')
+
+    inputRange.value = inputRange.max - inputRange.min;
+
     inputRange.addEventListener("input", (event) => {
         let rangeOutput = document.getElementById('outputNumPersonas');
         rangeOutput.style.display = "block";

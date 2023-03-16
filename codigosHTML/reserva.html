@@ -13,7 +13,7 @@
     <header>
         <nav>
             <a  href="index.html">
-                <img src="../recursos/imagenes/logoGrande.png"> 
+                <img alt="logo de vivac que representa una V como si fuera una tienda de campaña" src="../recursos/imagenes/logoGrande.png"> 
                 <span class="titulo">Vivac</span>
             </a>
         </nav>
@@ -22,7 +22,7 @@
     <hr>
 
     <div class="imagenCamping">
-        <img src="../recursos/imagenesSitios/fotoCampingNum1.jpg">
+        <img alt="imagen del sitio" src="../recursos/imagenesSitios/fotoCampingNum1.jpg">
 
         <aside>
             <h3>Nombre sitio</h3>
@@ -33,13 +33,13 @@
                <label>Hora final</label><input type="time" class="inputHorFech" id="horaFinInput" name="reservaHora">
                <label>Número de personas</label> 
                <div>
-                <input type="range" id="numPersonasInput" min="0", max="10" value=max-min oninput="this.nextElementSibling.value = this.value">
+                <input type="range" id="numPersonasInput" min="0" max="10" oninput="this.nextElementSibling.value = this.value">
                 <output id="outputNumPersonas"></output>  
                </div>
                
             </form>
             
-            <input class="boton" type="submit" form="Form" value="¡Reserva ya!""></input>
+            <input class="boton" type="submit" form="Form" value="¡Reserva ya!">
         </aside>
     </div>
 
@@ -47,17 +47,20 @@
 
     <footer>
         <div id="footerUp">
-            <a href="../codigosHTML/index.html"><img src="../recursos/imagenes/logoGrande.png">Vivac</a>
-            <img class="downloadButton" src="../recursos/imagenes/appstore.png">
-            <img class="downloadButton" src="../recursos/imagenes/googleplay.png">
+            <a href="../codigosHTML/index.html"><img alt="logo de vivac que representa una V como si fuera una tienda de campaña" src="../recursos/imagenes/logoGrande.png">Vivac &copy;</a>
+            <img alt="logo de descarga de AppStore" class="downloadButton" src="../recursos/imagenes/appstore.png">
+            <img alt="logo de descarga de PlayStore" class="downloadButton" src="../recursos/imagenes/googleplay.png">
             
         </div>
         <hr>
         <nav id="footerBottom">
+            <ul>
                 <li><a href="./salas.html">Lista de lugares</a></li>
                 <li><a href="./salas.html">Acampa</a></li>
                 <li><a href="./salas.html">Contáctanos</a></li>
                 <li><a href="./conocenos.html">Sobre nosotros</a></li>
+            </ul>
+                
         </nav>
         
     </footer>
