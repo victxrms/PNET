@@ -108,7 +108,8 @@ div .boton{
 footer{
     margin-top: 2em;
     font-weight: bold;
-    ;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 #footerUp{
