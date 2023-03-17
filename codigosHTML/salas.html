@@ -2,18 +2,20 @@
 <html lang="es">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width,
+initial-scale=1.0">
 		<meta name="keywords" content="app, android, ios, acampada, reserva, casas, camping">
 		<meta name="description" content="Web de reserva de espacios de acampada">
 		<meta name="author" content="Víctor Moreno Sola, Victor.MorenoSola@alum.uca.es">
 		<meta name="author2" content="Alejandro Sánchez Castillo, Alejandro.sanchezcastillo@alum.uca.es">
-		<link rel="stylesheet" href="../codigosCSS/index.css">
-		<link rel="stylesheet" href="../codigosCSS/salas.css">
+		<link rel="stylesheet" type="text/css" href="../codigosCSS/index.css">
+		<link rel="stylesheet" type="text/css" href="../codigosCSS/salas.css">
 		<title>Vivac</title>
 	</head>
 	<body>
-		<header>
+		<header class="stickyheader">
 			<nav>
-				<img src="../recursos/imagenes/logoGrande.png"> 
+				<img src="../recursos/imagenes/logoGrande.png" alt="logo de Vivac"> 
 				<a class="titulo">Vivac</a>
 				<br><br><a class="textonormal">Lista de sitios</a>
 				<hr>		
@@ -25,7 +27,7 @@
 
 			<a href="../codigosHTML/reserva.html">
 				<div class="card" style="width:20rem;">
-					<img src="../recursos/imagenesSitios/fotoCampingNum1.jpg" class="card-img-top" alt="...">
+					<img src="../recursos/imagenesSitios/fotoCampingNum1.jpg" class="card-img-top" alt="Imagen de una planicie al atardecer">
 					<div class="card-body">
 					  <h5 class="card-title">Card title</h5>
 					  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -36,7 +38,7 @@
 			
 			<a href="../codigosHTML/reserva2.html">
 				<div class="card" style="width:20rem;">
-  					<img src="../recursos/imagenesSitios/fotoCampingNum2.jpg" class="card-img-top" alt="...">
+  					<img src="../recursos/imagenesSitios/fotoCampingNum2.jpg" class="card-img-top" alt="imagen de un coche en un bosque">
   					<div class="card-body">
     					<h5 class="card-title">Card title</h5>
     					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -46,7 +48,7 @@
 
 			<a href="../codigosHTML/reserva3.html">
 				<div class="card" style="width:20rem;" id="carta3">
-					<img src="../recursos/imagenesSitios/fotoCampingNum3.jpg" class="card-img-top" alt="...">
+					<img src="../recursos/imagenesSitios/fotoCampingNum3.jpg" class="card-img-top" alt="Imagen de una tienda de campaña en una llanura">
 					<div class="card-body">
 				  		<h5 class="card-title">Card title</h5>
 				  		<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -56,7 +58,7 @@
 
 			<a href="../codigosHTML/reserva4.html">
 		  		<div class="card" style="width:20rem;">
-					<img src="../recursos/imagenesSitios/fotoCampingNum4.jpg" class="card-img-top" alt="...">
+					<img src="../recursos/imagenesSitios/fotoCampingNum4.jpg" class="card-img-top" alt="imagen de una tienda con sacos de dormir">
 					<div class="card-body">
 			  			<h5 class="card-title">Card title</h5>
 			  			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -66,7 +68,7 @@
 
 			<a href="../codigosHTML/reserva5.html">
 				<div class="card" style="width:20rem;">
-					<img src="../recursos/imagenesSitios/fotoCampingNum5.jpg" class="card-img-top" alt="...">
+					<img src="../recursos/imagenesSitios/fotoCampingNum5.jpg" class="card-img-top" alt="imagen del atarceder en la cima de una colina">
 					<div class="card-body">
 				  		<h5 class="card-title">Card title</h5>
 				  		<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -76,7 +78,7 @@
 
 			<a href="../codigosHTML/reserva6.html">
 			  <div class="card" style="width:20rem;">
-				<img src="../recursos/imagenesSitios/fotoCampingNum6.jpg" class="card-img-top" alt="...">
+				<img src="../recursos/imagenesSitios/fotoCampingNum6.jpg" class="card-img-top" alt="Imagen de una tienda de campaña en un lago">
 				<div class="card-body">
 				  <h5 class="card-title">Card title</h5>
 				  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -88,17 +90,19 @@
 
 		<footer class="sticky">
 			<div id="footerUp">
-				<a><img src="../recursos/imagenes/logoGrande.png">Vivac</a>
-				<img class="downloadButton" src="../recursos/imagenes/appstore.png">
-				<img class="downloadButton" src="../recursos/imagenes/googleplay.png">
+				<a href="../codigosHTML/index.html"><img src="../recursos/imagenes/logoGrande.png" alt="logo de Vivac:triángulo que simula una tienda de campaña">Vivac</a>
+				<img class="downloadButton" src="../recursos/imagenes/appstore.png" alt="Icono con el logo de la appstore">
+				<img class="downloadButton" src="../recursos/imagenes/googleplay.png" alt="Icono con el logo de googleplay">
 				
 			</div>
 			<hr>
 			<nav id="footerBottom">
-					<li>Lista de lugares</li>
-					<li>Acampa</li>
-					<li>Contáctanos</li>
-					<li>Sobre nosotros</li>
+				<ul>
+					<li><a href="./salas.html">Lista de lugares</a></li>
+                	<li><a href="./salas.html">Acampa</a></li>
+                	<li><a href="./salas.html">Contáctanos</a></li>
+                	<li><a href="./conocenos.html">Sobre nosotros</a></li>
+				</ul>
 			</nav>
 			
 		</footer>
