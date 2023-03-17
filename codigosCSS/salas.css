@@ -19,11 +19,14 @@
     }
 }
 
+
 .divTarjetas{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 100px; 
+  margin-bottom: 10px; 
+  margin-left: 0.9em;
+  width: 97.6%;
 }
 
 header .textonormal{
@@ -33,12 +36,10 @@ header .textonormal{
 }
 
 .sticky{
-  position: fixed;
+  position: sticky;
   bottom: 0;
-  left: 1em;
-  width: 1291px;
   background-color: white;
-  padding-bottom: 20px;
+  margin-left: 0.6em;
 }
 
 .card {
@@ -77,7 +78,9 @@ a{
 }
 
 ul{
-  margin-top: -0.6em;
-  margin-left: -2.9em;
-  margin-bottom: -0.2em;
+  margin-top: -6px;
+}
+
+header{
+  width: 97.4%;
 }
