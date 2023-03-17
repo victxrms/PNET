@@ -1,3 +1,24 @@
+@media screen and (max-width: 1108px){
+    div > div{
+      font-size: large;
+      margin-right: 1em;
+      align-items: center;
+    }
+
+    .divTarjetas{
+      justify-content: space-around !important;
+    }
+
+    .card-img-top{
+      height: 22em !important;
+      width: 25em !important; 
+    }
+
+    .card{
+      margin-right: 5em !important;
+    }
+}
+
 .divTarjetas{
   display: flex;
   flex-wrap: wrap;
@@ -8,7 +29,7 @@
 header .textonormal{
   font-size: 2em;
   font-weight: bold;
-  align-items: block;
+
 }
 
 .sticky{
@@ -53,4 +74,10 @@ header .textonormal{
 a{
   text-decoration: none;
   color: inherit;
+}
+
+ul{
+  margin-top: -0.6em;
+  margin-left: -2.9em;
+  margin-bottom: -0.2em;
 }
