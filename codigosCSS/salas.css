@@ -40,6 +40,7 @@ header .textonormal{
   bottom: 0;
   background-color: white;
   margin-left: 0.6em;
+
 }
 
 .card {
@@ -58,7 +59,7 @@ header .textonormal{
   border-bottom-right-radius: 10px;
   height: 20em;
   width: 22em;
-  
+  object-fit: cover;
 }
 
 .linea{
@@ -67,9 +68,21 @@ header .textonormal{
   
 }
 
+div .card-body{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: left;
+  width: 100%;
+}
+
 .card-title{
   font-weight: bold;
   font-size: 1.2em;
+}
+
+.card-text{
+  margin-top: -1.2em;
 }
 
 a{
