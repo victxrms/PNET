@@ -13,7 +13,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     inputRange.addEventListener("input", (event) => {
         let rangeOutput = document.getElementById('outputNumPersonas');
-        rangeOutput.style.display = "block";
+        rangeOutput.style.display = "inline";
+        rangeOutput.textContent = inputRange.value;
     });
 
     let horIniInput = document.getElementById('horaInicioInput');

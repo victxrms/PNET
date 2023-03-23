@@ -134,7 +134,8 @@ div .boton{
 }
 
 #Form output{
-    margin-top: 1em;
+    padding: 0.5em;
+    margin-top: 0.5em;
     vertical-align: middle;
     display: none;
 }
