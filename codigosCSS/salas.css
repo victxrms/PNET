@@ -91,6 +91,23 @@ div .card-body{
   margin-top: -1.2em;
 }
 
+table {
+  border-collapse: collapse;
+  
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+td[data-content="Sí"]::before {
+  content: "✔";
+}
+
+td[data-content="No"]::before {
+  content: "✘";
+}
+
 a{
   text-decoration: none;
   color: inherit;
