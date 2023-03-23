@@ -116,11 +116,18 @@ footer{
     justify-content: flex-end;
 }
 
-#footerUp a{
+#footerUp .textoLogo{
     justify-self: flex-start;
     align-self: center;
     margin-right: auto;
     font-size: 2em;
+}
+
+#footerUp .correoElectronico{
+    justify-self: flex-start;
+    align-self:flex-end;
+    margin-right: auto;
+    font-size: 1em;
 }
 
 #footerUp a > img{
