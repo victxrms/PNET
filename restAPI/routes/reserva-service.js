@@ -22,4 +22,15 @@ Reservas.prototype.connectDb = function (callback) {
         });
 };
 
+Reservas.prototype.getAll = function(callback) {
+    db.find({}).toArray((err, reservas) => {
+      if (err) {
+        callback(err);
+      } else {
+        callback(null, reservas);
+      }
+    });
+  };
+  
+
 module.exports = new Reservas();

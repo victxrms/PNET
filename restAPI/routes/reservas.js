@@ -13,7 +13,7 @@ router.get('/', function (req, res) {
                 });
             } else if (reservas.length == 0){
             	res.status(500).send({
-                    msg: "no existen reservas"
+                    msg: "No existen reservas"
                 });
             } else {
                 res.status(200).send(reservas);

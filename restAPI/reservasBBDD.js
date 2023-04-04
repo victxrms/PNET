@@ -13,10 +13,16 @@ app.use(express.urlencoded({
 }));
 app.use(logger('dev'));
 app.use(cors());
+app.use(express.static('../'));
 
 const reservaService = require('./routes/reserva-service');
 const reservas = require('./routes/reservas');
 app.use('/reservas', reservas);
+
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/public//rest.html'));
+});
+
 
 const server = http.createServer(app);
 
