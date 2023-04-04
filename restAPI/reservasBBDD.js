@@ -20,7 +20,7 @@ const reservas = require('./routes/reservas');
 app.use('/reservas', reservas);
 
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/public//rest.html'));
+    res.sendFile(path.join(__dirname + '/public/rest.html'));
 });
 
 
