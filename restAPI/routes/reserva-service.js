@@ -21,3 +21,5 @@ Reservas.prototype.connectDb = function (callback) {
             callback(err, database);
         });
 };
+
+module.exports = new Reservas();
