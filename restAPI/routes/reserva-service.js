@@ -11,11 +11,11 @@ Reservas.prototype.connectDb = function (callback) {
         {useNewUrlParser: true, useUnifiedTopology: true},
         function (err, database) {
             if (err) {
-		console.log(err);
+		  console.log(err);
                 callback(err);
             }
 
-   	    db = database.db('PNET-reservas').collection('reservas');
+   	  db = database.db('PNET-reservas').collection('reservas');
 	    console.log("Conexión correcta");
 
             callback(err, database);
@@ -23,7 +23,8 @@ Reservas.prototype.connectDb = function (callback) {
 };
 
 Reservas.prototype.getAll = function(callback) {
-    db.find({}).toArray((err, reservas) => {
+  //En el ejemplo sólo pone esta línea, pero el error se mantiene al ponerla: return db.find({}).toArray(callback); 
+  db.find({}).toArray((err, reservas) => {
       if (err) {
         callback(err);
       } else {
@@ -31,6 +32,9 @@ Reservas.prototype.getAll = function(callback) {
       }
     });
   };
-  
+
+Reservas.prototype.remove = function (_id, callback) {
+  return db.deleteOne({_id: ObjectId(_id)}, callback);
+};
 
 module.exports = new Reservas();
