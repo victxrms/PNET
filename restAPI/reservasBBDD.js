@@ -12,7 +12,9 @@ app.use(express.urlencoded({
     extended: true
 }));
 app.use(logger('dev'));
-app.use(cors());
+app.use(cors({
+    origin: '*'
+  }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 const reservaService = require('./routes/reservas-service');
