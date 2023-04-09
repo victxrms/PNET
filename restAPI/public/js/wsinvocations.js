@@ -5,12 +5,17 @@ function getAllReservas() {
         dataType: "json",
         url: myUrl,
         success: function(data) {
-            var reservaHtml = "<ul>";
+            var html = "";
             for (var i = 0; i < data.length; i++) {
-                reservaHtml += "<li>" + JSON.stringify(data[i]) + "</li>";
+                var reserva = data[i];
+                html += "<h4>" + reserva._id + " - " + reserva.lugar + "</h4>";
+                html += "<p>Dia: " + reserva.dia + "</p>";
+                html += "<p>Numero de personas: " + reserva.num_personas + "</p>";
+                html += "<p>Hora de entrada: " + reserva.hora_inicio + "</p>";
+                html += "<p>Hora de salida: " + reserva.hora_fin + "</p>";
+                html += "<hr>";
             }
-            reservaHtml += "</ul>";
-            $("#resReserva").html(reservaHtml);
+            $("#resReserva").html(html);
         },
         error: function(res) {
             alert("ERROR " + res.statusText);
@@ -26,7 +31,7 @@ function deleteReserva(reservaId) {
         dataType: "json",
         url: myUrl,
         success: function(data) {
-	    	$("#resReserva").html(JSON.stringify(data));
+            $("#resReserva").html("<strong>Correcto:</strong> " + data.msg);
         },
         error: function(res) {
             alert("ERROR " + res.statusText);
