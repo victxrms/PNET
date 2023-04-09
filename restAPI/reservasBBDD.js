@@ -15,7 +15,7 @@ app.use(logger('dev'));
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
 
-const reservaService = require('./routes/reserva-service');
+const reservaService = require('./routes/reservas-service');
 const reservas = require('./routes/reservas');
 app.use('/reservas', reservas);
 
