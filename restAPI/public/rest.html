@@ -3,7 +3,7 @@
 
 <!DOCTYPE HTML>
 <head>
-    <link rel="stylesheet" href="../../codigosCSS/index.css">
+    <link rel="stylesheet" href="./rest.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <html lang="es"></html>
     <title>Reserva tu camping</title>
@@ -16,27 +16,26 @@
     <header>
         <nav>
             <a  href="index.html">
-                <img alt="logo de vivac que representa una V como si fuera una tienda de campaña" src="../../recursos/imagenes/logoGrande.png"> 
+                <img alt="logo de vivac que representa una V como si fuera una tienda de campaña" src="./recursos/imagenes/logoGrande.png"> 
                 <h1 class="titulo">Vivac</h1>
             </a>
         </nav>
     </header>
 
-    <h3>Lista de todas las reservas</h3>
-
-    <div>
-        <input type="button" value="Get reservas" onclick="getAllReservas()" />
-        <input type="button" value="borrar una reserva" onclick="deleteReserva('642561ffde2bf96549dde3da')" />
+    <div id="botonesRest">
+        <input type="button" value="Muéstrame todas las reservas" onclick="getAllReservas()" />
+        <input type="button" value="Borra una reserva" onclick="deleteReserva('6432d52c8681c6502bfc9657')" />
         <h3 id="resReserva"></h3>
     </div>
 
 
+
     <footer>
         <div id="footerUp">
-            <a class="textoLogo" href="../../codigosHTML/index.html"><img alt="logo de vivac que representa una V como si fuera una tienda de campaña" src="../../recursos/imagenes/logoGrande.png">Vivac &copy;</a>
+            <a class="textoLogo" href="../../codigosHTML/index.html"><img alt="logo de vivac que representa una V como si fuera una tienda de campaña" src="./recursos/imagenes/logoGrande.png">Vivac &copy;</a>
             <a class="correoElectronico" href="mailto:informacion@vivac.net">Envíanos un correo</a>
-            <img alt="logo de descarga de AppStore" class="downloadButton" src="../../recursos/imagenes/appstore.png">
-            <img alt="logo de descarga de PlayStore" class="downloadButton" src="../../recursos/imagenes/googleplay.png">
+            <img alt="logo de descarga de AppStore" class="downloadButton" src="./recursos/imagenes/appstore.png">
+            <img alt="logo de descarga de PlayStore" class="downloadButton" src="./recursos/imagenes/googleplay.png">
             
         </div>
         <hr>

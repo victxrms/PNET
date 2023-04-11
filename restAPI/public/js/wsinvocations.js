@@ -8,7 +8,7 @@ function getAllReservas() {
             var html = "";
             for (var i = 0; i < data.length; i++) {
                 var reserva = data[i];
-                html += "<h4>" + reserva._id + " - " + reserva.lugar + "</h4>";
+                html += "<h3>" + reserva._id + " - " + reserva.lugar + "</h3>";
                 html += "<p>Dia: " + reserva.dia + "</p>";
                 html += "<p>Numero de personas: " + reserva.num_personas + "</p>";
                 html += "<p>Hora de entrada: " + reserva.hora_inicio + "</p>";
