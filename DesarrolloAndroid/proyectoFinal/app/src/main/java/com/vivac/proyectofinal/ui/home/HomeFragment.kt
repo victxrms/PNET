@@ -1,5 +1,8 @@
 package com.vivac.proyectofinal.ui.home
 
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -33,6 +36,12 @@ class HomeFragment : Fragment() {
             textView.text = it
         }
         return root
+    }
+
+    private val widgetClickReceiver = object : BroadcastReceiver() {
+        override fun onReceive(context: Context?, intent: Intent?) {
+            // Handle widget click event here
+        }
     }
 
     override fun onDestroyView() {

@@ -10,4 +10,6 @@ class LocalizacionViewModel : ViewModel() {
         value = "Aqui podras ver la localizacion y como llegar"
     }
     val text: LiveData<String> = _text
+
+
 }
