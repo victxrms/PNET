@@ -12,6 +12,7 @@ import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MapStyleOptions
 import com.google.android.gms.maps.model.MarkerOptions
 import com.vivac.proyectofinal.R
 import com.vivac.proyectofinal.databinding.FragmentLocalizacionBinding
@@ -59,15 +60,9 @@ class LocalizacionFragment : Fragment(), OnMapReadyCallback {
                 .position(casa)
                 .title("VIVAC - Sede Oficial")
         )
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(casa))
-        googleMap.animateCamera(
-            CameraUpdateFactory.newLatLngZoom(
-                LatLng(
-                    location.getLatitude(),
-                    location.getLongitude()
-                ), 12.0f
-            )
-        )
+        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(casa, 17.0f))
+        googleMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(requireActivity(), R.raw.style_json));
+
     }
 
     override fun onDestroyView() {

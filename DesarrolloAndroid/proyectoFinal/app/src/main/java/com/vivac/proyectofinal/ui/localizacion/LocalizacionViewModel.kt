@@ -7,9 +7,12 @@ import androidx.lifecycle.ViewModel
 class LocalizacionViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "Aqui podras ver la localizacion y como llegar"
+        value = "Aquí podrás ver la localización de la empresa y como llegar."
     }
     val text: LiveData<String> = _text
+
+
+
 
 
 }
