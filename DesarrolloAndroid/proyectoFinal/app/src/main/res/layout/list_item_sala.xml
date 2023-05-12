@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewNombreSala"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="texto con el nombre de la sala"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />straintLayout>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="400dp"
+            android:layout_height="200dp"
+            android:layout_marginVertical="20dp"
+            android:src="@drawable/sala1"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNombreSala"
+            tools:layout_editor_absoluteX="8dp"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/textViewDescSala"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="10dp"
+            android:text="texto con la desc de la sala"
+            android:textAlignment="center"
+            android:textColor="@color/darkgrey"
+            android:textSize="15sp"
+            android:textStyle="bold" />straintLayout>
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
