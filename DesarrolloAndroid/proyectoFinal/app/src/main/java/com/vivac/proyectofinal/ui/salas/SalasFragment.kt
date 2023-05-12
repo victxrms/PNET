@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.vivac.proyectofinal.databinding.FragmentSalasBinding
 import com.vivac.proyectofinal.ui.salas.SalasViewModel
 
@@ -18,22 +20,34 @@ class SalasFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: SalaAdapter
+    private lateinit var viewModel: SalasViewModel
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val salasViewModel =
-            ViewModelProvider(this).get(SalasViewModel::class.java)
-
         _binding = FragmentSalasBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textSalas
-        salasViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
+        recyclerView = binding.recyclerView
+        adapter = SalaAdapter()
+        recyclerView.adapter = adapter
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
         return root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        viewModel = ViewModelProvider(this).get(SalasViewModel::class.java)
+
+        viewModel.getSalas().observe(viewLifecycleOwner) { salas ->
+            adapter.setSalas(salas)
+            adapter.notifyDataSetChanged()
+        }
     }
 
     override fun onDestroyView() {
