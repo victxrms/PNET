@@ -23,7 +23,7 @@
             android:textStyle="bold" />straintLayout>
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/imagenViewSala"
             android:layout_width="400dp"
             android:layout_height="200dp"
             android:layout_marginVertical="20dp"
@@ -40,7 +40,7 @@
             android:layout_marginVertical="10dp"
             android:text="texto con la desc de la sala"
             android:textAlignment="center"
-            android:textColor="@color/darkgrey"
+            android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold" />straintLayout>
 

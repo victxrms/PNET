@@ -1,3 +1,5 @@
 package com.vivac.proyectofinal.ui.salas
 
-data class Sala(val nombre: String, val desc: String)
+import android.widget.ImageView
+
+data class Sala(val nombre: String, val desc: String, val imagen: Int)

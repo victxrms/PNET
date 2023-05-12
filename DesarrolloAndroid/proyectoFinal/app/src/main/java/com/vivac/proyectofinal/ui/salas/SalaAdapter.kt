@@ -1,12 +1,13 @@
 package com.vivac.proyectofinal.ui.salas
 
 
+import android.graphics.drawable.Drawable
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.vivac.proyectofinal.R
 
@@ -21,6 +22,7 @@ class SalaAdapter(private var salas: List<Sala>) :
     inner class SalaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nombreTextView: TextView = itemView.findViewById(R.id.textViewNombreSala)
         val SalaDescView: TextView = itemView.findViewById(R.id.textViewDescSala)
+        val imagenSala: ImageView = itemView.findViewById(R.id.imagenViewSala)
     }
 
     constructor() : this(emptyList())
@@ -35,6 +37,7 @@ class SalaAdapter(private var salas: List<Sala>) :
         val currentSala = salas[position]
         holder.nombreTextView.text = currentSala.nombre
         holder.SalaDescView.text = currentSala.desc
+        holder.imagenSala.setImageResource(currentSala.imagen)
 
     }
     override fun getItemCount() = salas.size
