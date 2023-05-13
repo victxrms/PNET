@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.Menu
 import com.google.android.material.snackbar.Snackbar
@@ -15,6 +16,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import com.google.android.gms.maps.MapFragment
 import com.vivac.proyectofinal.databinding.ActivityMainBinding
 import com.vivac.proyectofinal.ui.localizacion.LocalizacionFragment
@@ -36,9 +38,36 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.appBarMain.toolbar)
 
+        // Obtener el modo actual de la aplicación
+        val currentNightMode = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
+
+        // Establecer el icono del fab según el modo actual
+        val fabIcon = if (currentNightMode == Configuration.UI_MODE_NIGHT_YES) {
+            R.drawable.ic_mododia
+        } else {
+            R.drawable.ic_modonoche
+        }
+        binding.appBarMain.fab.setImageResource(fabIcon)
+
         binding.appBarMain.fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
+            val currentNightMode = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
+            when (currentNightMode) {
+                Configuration.UI_MODE_NIGHT_NO -> {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                }
+                Configuration.UI_MODE_NIGHT_YES -> {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                }
+                else -> {
+                    // No se cambia nada, se mantiene el mismo modo que ya estaba
+                }
+
+            }
+
+            recreate()
+
         }
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView

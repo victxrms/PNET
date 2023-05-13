@@ -1,5 +1,6 @@
 package com.vivac.proyectofinal.ui.localizacion
 
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -54,6 +55,9 @@ class LocalizacionFragment : Fragment(), OnMapReadyCallback {
         // Asignamos el valor de GoogleMap a nuestra referencia.
         this.googleMap = googleMap
 
+        val isNightMode = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES
+
+
         val casa = LatLng(36.537312,-6.201562)
         googleMap.addMarker(
             MarkerOptions()
@@ -62,6 +66,12 @@ class LocalizacionFragment : Fragment(), OnMapReadyCallback {
         )
         googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(casa, 17.0f))
         googleMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(requireActivity(), R.raw.style_json));
+
+        if (isNightMode) {
+            googleMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(requireActivity(), R.raw.stylenoche_json))
+        } else {
+            googleMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(requireActivity(), R.raw.style_json))
+        }
 
     }
 
