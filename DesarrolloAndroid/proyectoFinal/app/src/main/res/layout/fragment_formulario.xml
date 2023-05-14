@@ -1,184 +1,279 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginHorizontal="0dp"
+    android:layout_marginVertical="0dp"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-
-    <TextView
-        android:id="@+id/textViewNombreF"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nombre: "
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        android:textStyle="bold" />
+        android:theme="@style/Theme.ProyectoFinal.AppBarOverlay">
 
-    <EditText
-        android:id="@+id/EditNombreF"
-        android:layout_width="195dp"
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.ProyectoFinal.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="text" />
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="12dp">
+
+
+            <TextView
+                android:id="@+id/textViewSelectF"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Lugar: "
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="218dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:textSize="12sp"
+                android:entries="@array/lugares"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="12dp">
+
+            <TextView
+                android:id="@+id/textViewNombreF"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Nombre: "
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+
+
+            <EditText
+                android:id="@+id/EditNombreF"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="4dp"
+                android:layout_width="218dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line_shape"
+                android:inputType="text"
+                android:singleLine="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewDniF"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp"
+                android:text="dni"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/EditDniF"
+                android:layout_width="218dp"
+                android:layout_marginVertical="12dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line_shape"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewEmailF"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp"
+                android:text="Correo electrónico: "
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/EditEmailF"
+                android:layout_width="218dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="18dp"
+                android:background="@drawable/line_shape"
+                android:inputType="textEmailAddress" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewTelF"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp"
+                android:text="Teléfono"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/EditTelefonoF"
+                android:layout_width="218dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="12dp"
+                android:background="@drawable/line_shape"
+                android:inputType="phone" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewFechaIniF"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp"
+                android:text="Fecha de llegada: "
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btnMostrarDatePicker"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_marginVertical="8dp"
+                android:text="Mostrar calendario"
+                android:textSize="5dp"/>
+
+            <DatePicker
+                android:id="@+id/EditFechaIniF"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:visibility="visible"
+                android:theme="@style/DatePickerStyle"/>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewFechaFinF"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp"
+                android:text="Fecha de salida: "
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btnDatePickerFin"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_marginVertical="8dp"
+                android:text="Mostrar calendario"
+                android:textSize="5dp"/>
+
+            <DatePicker
+                android:id="@+id/EditFechaFinF"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:visibility="visible"
+                android:theme="@style/DatePickerStyle"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewNumPersonasF"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp"
+                android:text="Número de personas:"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <NumberPicker
+                android:id="@+id/EditNumPersonasF"
+                android:layout_width="100dp"
+                android:layout_marginVertical="18dp"
+                android:background="@drawable/line_shape"
+                android:layout_height="30dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/textViewComentarioF"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp"
+                android:text="Comentario extra:"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/EditComentarioF"
+                android:layout_width="218dp"
+                android:background="@drawable/line_shape"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="12dp"
+                android:inputType="text" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
 </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/textViewDniF"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="5dp"
-            android:layout_marginVertical="10dp"
-            android:text="dni"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
-
-        <EditText
-            android:id="@+id/EditDniF"
-            android:layout_width="218dp"
-            android:layout_height="wrap_content"
-            android:inputType="text" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/textViewTelF"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="5dp"
-            android:layout_marginVertical="10dp"
-            android:text="Teléfono"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
-
-        <EditText
-            android:id="@+id/EditTelefonoF"
-            android:layout_width="183dp"
-            android:layout_height="wrap_content"
-            android:inputType="phone" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/textViewEmailF"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="5dp"
-            android:layout_marginVertical="10dp"
-            android:text="Correo electrónico: "
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
-
-        <EditText
-            android:id="@+id/EditEmailF"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress" />
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/textViewFechaIniF"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="5dp"
-            android:layout_marginVertical="10dp"
-            android:text="Fecha de llegada: "
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
-
-        <DatePicker
-            android:id="@+id/EditFechaIniF"
-            android:layout_width="80dp"
-            android:layout_height="80dp"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/textViewFechaFinF"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="5dp"
-            android:layout_marginVertical="10dp"
-            android:text="Fecha de salida: "
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
-
-        <DatePicker
-            android:id="@+id/EditFechaFinF"
-            android:layout_width="80dp"
-            android:layout_height="80dp"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/textViewNumPersonasF"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="5dp"
-            android:layout_marginVertical="10dp"
-            android:text="Número de personas:"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
-
-        <NumberPicker
-            android:id="@+id/EditNumPersonasF"
-            android:layout_width="100dp"
-            android:layout_height="30dp"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/textViewComentarioF"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="5dp"
-            android:layout_marginVertical="10dp"
-            android:text="Comentario extra:"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
-        <EditText
-            android:id="@+id/EditComentarioF"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:inputType="text" />
-    </LinearLayout>
-
-
-
-
-</LinearLayout>
