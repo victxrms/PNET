@@ -15,4 +15,12 @@
     <string name="enlaceCercanias"> <a href="https://www.renfe.com/es/es/cercanias/cercanias-cadiz/horarios">Cercanías Renfe</a> </string>
     <string name="enlaceBusCadiz"> <a href="https://siu.cmtbc.es/es/horarios_lineas_tabla.php?linea=27">Autobús desde Jerez</a> </string>
     <string name="enlaceBusJerez"> <a href="https://siu.cmtbc.es/es/horarios_lineas_tabla.php?linea=220">Autobús desde Cádiz</a> </string>
+    <string-array name="lugares">
+        <item>Acebedo</item>
+        <item>Cerromulera</item>
+        <item>Ordesa</item>
+        <item>Bueida</item>
+        <item>Covão DAmetade</item>
+        <item>Navaleno</item>
+    </string-array>
 </resources>
