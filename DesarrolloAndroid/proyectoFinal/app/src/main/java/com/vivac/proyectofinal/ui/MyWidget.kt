@@ -16,7 +16,7 @@ class MyWidget : AppWidgetProvider() {
         super.onUpdate(context, appWidgetManager, appWidgetIds)
         for (appWidgetId in appWidgetIds) {
             val views = RemoteViews(context.packageName, R.layout.widget_layout)
-            views.setTextViewText(R.id.textView, "Hello, World!")
+            views.setTextViewText(R.id.textView, "Widget pulsado")
             // Agregamos un onClick en el TextView para abrir la MainActivity
             val intent = Intent(context, MainActivity::class.java)
             val pendingIntent = PendingIntent.getActivity(context, 0, intent, 0)
