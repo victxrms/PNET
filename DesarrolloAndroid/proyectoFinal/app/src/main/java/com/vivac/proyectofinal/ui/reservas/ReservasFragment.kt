@@ -25,10 +25,7 @@ class ReservasFragment : Fragment() {
         _binding = FragmentReservasBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textReservas
-        reservasViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
+
         return root
     }
 

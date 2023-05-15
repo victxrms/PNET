@@ -10,6 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.vivac.proyectofinal.R
+import com.vivac.proyectofinal.ui.reservas.Reserva
 
 
 class ReservaAdapter(private var reservas: List<Reserva>) :
@@ -42,10 +43,10 @@ class ReservaAdapter(private var reservas: List<Reserva>) :
         holder.nombreCliTextView.text = currentReserva.nombreCli
         holder.dniTextView.text = currentReserva.dni
         holder.telefonoTextView.text = currentReserva.telefono
-        holder.emailTextView.text = currentReserva.email
-        holder.fechaIniTextView.text = currentReserva.fechaIni
-        holder.fechaFinTextView.text = currentReserva.fechaFin
-        holder.numPersonasTextView.text = currentReserva.numPersonas
+        holder.emailTextView.text = currentReserva.email.toString()
+        holder.fechaIniTextView.text = currentReserva.fechaIni.toString()
+        holder.fechaFinTextView.text = currentReserva.fechaFin.toString()
+        holder.numPersonasTextView.text = currentReserva.numPersonas.toString()
         holder.comentarioTextView.text = currentReserva.comentario
 
 

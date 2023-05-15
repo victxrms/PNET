@@ -14,7 +14,11 @@ import android.widget.EditText
 
 class FormularioFragment : Fragment() {
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         // Inflar el layout para este Fragmento
         val rootView = inflater.inflate(R.layout.fragment_formulario, container, false)
 
@@ -28,27 +32,46 @@ class FormularioFragment : Fragment() {
             val fechaini = rootView.findViewById<DatePicker>(R.id.textViewFechaIniF)
             val fechafin = rootView.findViewById<DatePicker>(R.id.textViewFechaFinF)
 
-            fechaini.init(fechaini.year, fechaini.month, fechaini.dayOfMonth) { view, year, monthOfYear, dayOfMonth ->
-                Toast.makeText(this, "Fecha de inicio seleccionada: $dayOfMonth/${monthOfYear + 1}/$year", Toast.LENGTH_SHORT).show()
+            fechaini.init(
+                fechaini.year,
+                fechaini.month,
+                fechaini.dayOfMonth
+            ) { view, year, monthOfYear, dayOfMonth ->
+                Toast.makeText(
+                    requireActivity(),
+                    "Fecha de inicio seleccionada: $dayOfMonth/${monthOfYear + 1}/$year",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
 
-            fechafin.init(fechafin.year, fechafin.month, fechafin.dayOfMonth) { view, yearfin, monthOfYearfin, dayOfMonthfin ->
-                Toast.makeText(this, "Fecha de fin seleccionada: $dayOfMonthfin/${monthOfYearfin + 1}/$yearfin", Toast.LENGTH_SHORT).show()
+            fechafin.init(
+                fechafin.year,
+                fechafin.month,
+                fechafin.dayOfMonth
+            ) { view, yearfin, monthOfYearfin, dayOfMonthfin ->
+                Toast.makeText(
+                    requireActivity(),
+                    "Fecha de fin seleccionada: $dayOfMonthfin/${monthOfYearfin + 1}/$yearfin",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
 
-            if (nombre.text.isEmpty()){
-                Toast.makeText(this, "Introduzca su nombre", Toast.LENGTH_SHORT).show()
-            }else if(dni.text.isEmpty()){
-                Toast.makeText(this, "Introduzca su dni", Toast.LENGTH_SHORT).show()
-            }else if(email.text.isEmpty()) {
-                Toast.makeText(this, "¡Introduzca su email", Toast.LENGTH_SHORT).show()
-            }else if (telefono.text.isEmpty()){
-                Toast.makeText(this, "Introduzca su teléfono", Toast.LENGTH_SHORT).show()
-            }else if (fechaini.year == 0 || fechaini.month == 0 || fechaini.dayOfMonth == 0) {
-                Toast.makeText(this, "Introduzca una fecha de inicio", Toast.LENGTH_SHORT).show()
-            }else if (fechafin.year == 0 || fechafin.month == 0 || fechafin.dayOfMonth == 0) {
-                Toast.makeText(this, "Introduzca una fecha de fin", Toast.LENGTH_SHORT).show()
+            if (nombre.text.isEmpty()) {
+                Toast.makeText(requireActivity(), "Introduzca su nombre", Toast.LENGTH_SHORT).show()
+            } else if (dni.text.isEmpty()) {
+                Toast.makeText(requireActivity(), "Introduzca su dni", Toast.LENGTH_SHORT).show()
+            } else if (email.text.isEmpty()) {
+                Toast.makeText(requireActivity(), "¡Introduzca su email", Toast.LENGTH_SHORT).show()
+            } else if (telefono.text.isEmpty()) {
+                Toast.makeText(requireActivity(), "Introduzca su teléfono", Toast.LENGTH_SHORT).show()
+            } else if (fechaini.year == 0 || fechaini.month == 0 || fechaini.dayOfMonth == 0) {
+                Toast.makeText(requireActivity(), "Introduzca una fecha de inicio", Toast.LENGTH_SHORT).show()
+            } else if (fechafin.year == 0 || fechafin.month == 0 || fechafin.dayOfMonth == 0) {
+                Toast.makeText(requireActivity(), "Introduzca una fecha de fin", Toast.LENGTH_SHORT).show()
             }
+
+        }
+
         return rootView
     }
 }
