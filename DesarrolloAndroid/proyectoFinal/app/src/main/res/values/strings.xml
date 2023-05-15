@@ -12,9 +12,9 @@
     <string name="menu_reservas">Reservas</string>
     <string name="menu_localizacion">Localizacion</string>
     <string name="textoDescripcionLocalizacion">Vivac es una empresa que permite la reserva de diferentes acamapadas. Asiste a nuestras oficinas y podrás consultarnos cualquier duda, desde como usar la aplicación a como crear tu propio camping promocionarlo en nuestra web. <br> </br></string>
-    <string name="enlaceCercanias"> <a href="https://www.renfe.com/es/es/cercanias/cercanias-cadiz/horarios">Cercanías Renfe</a> </string>
-    <string name="enlaceBusCadiz"> <a href="https://siu.cmtbc.es/es/horarios_lineas_tabla.php?linea=27">Autobús desde Jerez</a> </string>
-    <string name="enlaceBusJerez"> <a href="https://siu.cmtbc.es/es/horarios_lineas_tabla.php?linea=220">Autobús desde Cádiz</a> </string>
+    <string name="enlaceCercanias"> Trenes de cercanías </string>
+    <string name="enlaceBusCadiz">  Autobús desde Jerez </string>
+    <string name="enlaceBusJerez"> Autobús desde Cádiz </string>
     <string-array name="lugares">
         <item>Acebedo</item>
         <item>Cerromulera</item>

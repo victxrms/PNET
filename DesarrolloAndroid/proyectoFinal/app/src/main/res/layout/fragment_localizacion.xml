@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="390dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView43"
+        app:layout_constraintTop_toBottomOf="@+id/buscdz"
         tools:layout_editor_absoluteX="0dp" />
 
     <TextView
@@ -42,39 +42,42 @@
         tools:layout_editor_absoluteX="0dp" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tren"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/enlaceCercanias"
-        android:textColorLink="@color/naranjaOscuro"
+        android:textColor="@color/naranjaOscuro"
         android:autoLink="web"
         android:padding="5dp"
+        android:textStyle="italic"
         android:textSize="20sp"
         app:layout_constraintTop_toBottomOf="@+id/text_descripcionLocalizacion"
         tools:layout_editor_absoluteX="172dp" />
 
     <TextView
-        android:id="@+id/textView42"
+        android:id="@+id/busxrx"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autoLink="web"
         android:padding="5dp"
         android:text="@string/enlaceBusJerez"
-        android:textColorLink="@color/naranjaOscuro"
+        android:textColor="@color/naranjaOscuro"
+        android:textStyle="italic"
         android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/tren"
         tools:layout_editor_absoluteX="172dp" />
 
     <TextView
-        android:id="@+id/textView43"
+        android:id="@+id/buscdz"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autoLink="web"
         android:padding="5dp"
         android:text="@string/enlaceBusCadiz"
-        android:textColorLink="@color/naranjaOscuro"
+        android:textColor="@color/naranjaOscuro"
+        android:textStyle="italic"
         android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@+id/textView42"
+        app:layout_constraintTop_toBottomOf="@+id/busxrx"
         tools:layout_editor_absoluteX="172dp" />
 
 

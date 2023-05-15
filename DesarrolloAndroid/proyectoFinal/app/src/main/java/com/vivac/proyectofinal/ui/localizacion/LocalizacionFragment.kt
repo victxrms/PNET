@@ -1,7 +1,10 @@
 package com.vivac.proyectofinal.ui.localizacion
 
+import android.content.Intent
 import android.content.res.Configuration
+import android.net.Uri
 import android.os.Bundle
+import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -47,6 +50,33 @@ class LocalizacionFragment : Fragment(), OnMapReadyCallback {
         // para registrar un OnMapReadyCallback.
         val mapFragment = childFragmentManager.findFragmentById(R.id.map_fragment) as SupportMapFragment
         mapFragment.getMapAsync(this)
+
+        val textViewCercanias: TextView = binding.tren
+        textViewCercanias.setOnClickListener {
+            val url = "https://www.renfe.com/es/es/cercanias/cercanias-cadiz/horarios"
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse(url)
+            startActivity(intent)
+
+        }
+
+        val textViewBusJerez: TextView = binding.busxrx
+        textViewBusJerez.setOnClickListener {
+            val url = "https://siu.cmtbc.es/es/horarios_lineas_tabla.php?linea=220"
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse(url)
+            startActivity(intent)
+
+        }
+
+        val textViewBusCadiz: TextView = binding.buscdz
+        textViewBusCadiz.setOnClickListener {
+            val url = "https://siu.cmtbc.es/es/horarios_lineas_tabla.php?linea=27"
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse(url)
+            startActivity(intent)
+
+        }
 
         return root
     }
