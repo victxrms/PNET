@@ -3,16 +3,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/widget_layout">
+
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/ic_preview"/>
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:textColor="@android:color/black"
-        android:textSize="18sp" />
+        android:layout_width="174dp"
+        android:layout_height="148dp"
+        android:src="@mipmap/ic_preview" />
 </LinearLayout>
