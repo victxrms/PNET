@@ -29,5 +29,16 @@
         android:label="@string/menu_localizacion"
         tools:layout="@layout/fragment_localizacion" />
 
+    <fragment
+        android:id="@+id/nav_formulario"
+        android:name="com.vivac.proyectofinal.ui.formulario.FormularioFragment"
+        android:label="Añadir Reserva"
+        tools:layout="@layout/fragment_formulario" />
+
+    <fragment
+        android:id="@+id/nav_eliminar"
+        android:name="com.vivac.proyectofinal.ui.eliminar.EliminarFragment"
+        android:label="Eliminar Reserva"
+        tools:layout="@layout/fragment_eliminar" />
 
 </navigation>
