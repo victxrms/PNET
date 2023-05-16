@@ -10,18 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <Button
-        android:id="@+id/buttonFormulario"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginVertical="10dp"
-        android:gravity="center"
-        android:text="Crear una nueva reserva"
-        android:textColor="@color/white"
-        tools:layout_editor_absoluteX="143dp"
-        tools:layout_editor_absoluteY="220dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
