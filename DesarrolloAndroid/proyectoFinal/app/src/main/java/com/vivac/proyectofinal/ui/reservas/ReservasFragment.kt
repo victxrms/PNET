@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.crashlytics.buildtools.reloc.org.apache.http.client.HttpClient
 import com.vivac.proyectofinal.R
@@ -39,8 +40,10 @@ class ReservasFragment : Fragment() {
     private lateinit var viewModel: ReservasViewModel
     private lateinit var recyclerView: RecyclerView
 
-    private lateinit var reservasList: MutableLiveData<List<Reserva>>
-    private lateinit var listaReservas: List<Reserva>
+    private val reservasList: MutableLiveData<List<Reserva>> = MutableLiveData<List<Reserva>>().apply {
+        value = emptyList()
+    }
+    private var listaReservas: List<Reserva> = emptyList()
     private var adapter =  ReservaAdapter(listaReservas)
 
 
@@ -62,7 +65,17 @@ class ReservasFragment : Fragment() {
                 }
             }
             // Hacemos la solicitud GET utilizando el cliente
-            listaReservas = client.get("http://127.0.0.1:8080/reservas")
+
+            val response: List<Reserva> =  client.get("http://127.0.0.1:8080/reservas")
+
+            withContext(Dispatchers.Main) {
+                listaReservas = response
+                adapter = ReservaAdapter(listaReservas)
+                adapter.setReservas(listaReservas)
+                reservasList.value = listaReservas
+                viewModel.getlist(reservasList)
+            }
+
         }
         return rootView
     }
@@ -71,9 +84,10 @@ class ReservasFragment : Fragment() {
             super.onViewCreated(view, savedInstanceState)
 
             viewModel = ViewModelProvider(this).get(ReservasViewModel::class.java)
-            adapter.setReservas(listaReservas)
+            adapter.setReservas(listaReservas) //no está inicializada
             reservasList.value = listaReservas
             viewModel.getlist(reservasList)
+
 
 
             viewModel.getReservas().observe(viewLifecycleOwner) { listaReservas ->
@@ -81,6 +95,12 @@ class ReservasFragment : Fragment() {
                 adapter.notifyDataSetChanged()
 
             }
+
+            recyclerView = view.findViewById(R.id.recyclerViewR)
+            adapter = ReservaAdapter()
+
+            recyclerView.layoutManager = LinearLayoutManager(requireContext())
+            recyclerView.adapter = adapter
 
         }
 

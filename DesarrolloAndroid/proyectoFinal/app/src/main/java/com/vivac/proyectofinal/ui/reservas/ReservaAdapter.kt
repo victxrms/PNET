@@ -53,6 +53,7 @@ class ReservaAdapter(private var reservas: List<Reserva>) :
 
     }
     override fun getItemCount() = reservas.size
+
     fun setReservas(reservas: List<Reserva>) {
         this.reservas = reservas
     }
