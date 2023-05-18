@@ -19,6 +19,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import com.google.gson.Gson
+import io.ktor.client.*
+import io.ktor.client.engine.android.*
+import io.ktor.client.request.*
 
 class ReservasFragment : Fragment() {
 
