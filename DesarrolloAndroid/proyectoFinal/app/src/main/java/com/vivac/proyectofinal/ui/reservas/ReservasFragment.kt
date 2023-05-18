@@ -10,6 +10,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.RecyclerView
@@ -19,7 +20,6 @@ import com.vivac.proyectofinal.databinding.FragmentReservasBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import com.google.gson.Gson
 import com.vivac.proyectofinal.ui.salas.ReservaAdapter
 import com.vivac.proyectofinal.ui.salas.SalaAdapter
 import com.vivac.proyectofinal.ui.salas.SalasViewModel
@@ -36,9 +36,14 @@ class ReservasFragment : Fragment() {
     private var _binding: FragmentReservasBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var adapter: ReservaAdapter
     private lateinit var viewModel: ReservasViewModel
+    private lateinit var recyclerView: RecyclerView
+
+    private lateinit var reservasList: MutableLiveData<List<Reserva>>
+    private lateinit var listaReservas: List<Reserva>
+    private var adapter =  ReservaAdapter(listaReservas)
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -57,28 +62,26 @@ class ReservasFragment : Fragment() {
                 }
             }
             // Hacemos la solicitud GET utilizando el cliente
-            val response = client.get<Reserva>("https://ejemplo.com/api/data")
-
-            val json = Json { ignoreUnknownKeys = true }
-            // Define el objeto JSON como una cadena de texto
-            val jsonString = """{"id":1,"name":"John Doe","age":30}"""
-            // Deserializa el objeto JSON en una instancia de la clase MyData
-            val myData = json.decodeFromString<Reserva>(jsonString)
-            // Ahora puedes acceder a las propiedades de la instancia de MyData
-            println("ID: ${myData.nombreSala}, Name: ${myData.name}, Age: ${myData.age}")
-
-
+            listaReservas = client.get("http://127.0.0.1:8080/reservas")
         }
+        return rootView
+    }
 
         override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
             super.onViewCreated(view, savedInstanceState)
 
             viewModel = ViewModelProvider(this).get(ReservasViewModel::class.java)
+            adapter.setReservas(listaReservas)
+            reservasList.value = listaReservas
+            viewModel.getlist(reservasList)
 
-            viewModel.getReservas().observe(viewLifecycleOwner) { reservas ->
-                adapter.setReservas(reservas)
+
+            viewModel.getReservas().observe(viewLifecycleOwner) { listaReservas ->
+                adapter.setReservas(listaReservas)
                 adapter.notifyDataSetChanged()
+
             }
+
         }
 
     override fun onDestroyView() {
