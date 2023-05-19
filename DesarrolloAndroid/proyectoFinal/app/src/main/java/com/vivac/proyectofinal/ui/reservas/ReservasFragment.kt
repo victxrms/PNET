@@ -38,7 +38,7 @@ class ReservasFragment : Fragment() {
         val root: View = binding.root
 
         var reservas : List<Reserva>
-        val recyclerView: RecyclerView = binding.recyclerView
+        val recyclerView: RecyclerView = binding.recyclerViewR
         val context = requireContext()
         recyclerView.layoutManager = LinearLayoutManager(context)
 
