@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.DatePicker
+import android.widget.TimePicker
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
@@ -42,6 +43,29 @@ class FormularioFragment : Fragment() {
                 datePickerFin.visibility = View.GONE
             } else {
                 datePickerFin.visibility = View.VISIBLE
+            }
+        }
+
+
+        val btnMostrarTimePickerLlegada: Button = rootView.findViewById(com.vivac.proyectofinal.R.id.btnTimePickerLlegada)
+        val TimePickerLlegada: TimePicker = rootView.findViewById(com.vivac.proyectofinal.R.id.EditHoraLlegadaF)
+
+        btnMostrarTimePickerLlegada.setOnClickListener {
+            if (TimePickerLlegada.visibility == View.VISIBLE) {
+                TimePickerLlegada.visibility = View.GONE
+            } else {
+                TimePickerLlegada.visibility = View.VISIBLE
+            }
+        }
+
+        val btnMostrarTimePickerSalida: Button = rootView.findViewById(com.vivac.proyectofinal.R.id.btnTimePickerSalida)
+        val TimePickerSalida: TimePicker = rootView.findViewById(com.vivac.proyectofinal.R.id.EditHoraSalida)
+
+        btnMostrarTimePickerSalida.setOnClickListener {
+            if (TimePickerSalida.visibility == View.VISIBLE) {
+                TimePickerSalida.visibility = View.GONE
+            } else {
+                TimePickerSalida.visibility = View.VISIBLE
             }
         }
 
