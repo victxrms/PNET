@@ -24,6 +24,12 @@
         tools:layout="@layout/fragment_reservas" />
 
     <fragment
+        android:id="@+id/nav_masreservas"
+        android:name="com.vivac.proyectofinal.ui.reservas.formulario.FormularioFragment"
+        android:label="Añade una reserva"
+        tools:layout="@layout/fragment_formulario" />
+
+    <fragment
         android:id="@+id/nav_localizacion"
         android:name="com.vivac.proyectofinal.ui.localizacion.LocalizacionFragment"
         android:label="@string/menu_localizacion"
@@ -32,7 +38,7 @@
     <fragment
         android:id="@+id/nav_formulario"
         android:name="com.vivac.proyectofinal.ui.formulario.FormularioFragment"
-        android:label="Añadir Reserva"
+        android:label="Añade una reserva"
         tools:layout="@layout/fragment_formulario" />
 
     <fragment
