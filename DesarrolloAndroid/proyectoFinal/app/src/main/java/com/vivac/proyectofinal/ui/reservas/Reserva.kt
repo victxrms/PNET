@@ -1,8 +1,9 @@
 package com.vivac.proyectofinal.ui.reservas
 
 import android.provider.ContactsContract.CommonDataKinds.Email
+import kotlinx.serialization.Serializable
 import java.util.Date
 
-data class Reserva(val nombreSala: String, val nombreCli: String, val dni: String,
-                val email: Email, val telefono: String, val fechaIni: Date,
-                val fechaFin: Date, val numPersonas: Int, val comentario: String)
+@Serializable
+data class Reserva(var _id: String, var lugar: String, var dia: String, var hora_inicio: String,
+                   var hora_fin: String, var num_personas: String)

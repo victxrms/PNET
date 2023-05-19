@@ -2,34 +2,39 @@ package com.vivac.proyectofinal.ui.reservas
 
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.android.Android
-import io.ktor.client.features.get
-import io.ktor.client.features.json.JsonFeature
-import io.ktor.client.features.json.serializer.KotlinxSerializer
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
-import kotlinx.serialization.Serializable
 import io.ktor.client.request.get
+import android.util.Log
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+import io.ktor.client.call.body
+import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
+import io.ktor.client.statement.HttpResponse
+import io.ktor.client.statement.bodyAsText
+import io.ktor.client.statement.readText
+import io.ktor.serialization.kotlinx.json.json
+import java.lang.Exception
+import java.lang.reflect.Type
+
 
 class ApiService {
-        private val client = HttpClient(Android) {
-            install(JsonFeature) {
-                serializer = KotlinxSerializer()
-            }
+    private val client = HttpClient(Android){
+        install(ContentNegotiation){
+            json()
         }
-    // Creamos una función suspend para hacer la petición GET que utiliza ktor-client para hacer una solicitud GET a una API RESTful
-    suspend fun getExample() {
-        // Creamos una instancia del cliente HTTP
-        val client = HttpClient(Android) {
-            // Agregamos el módulo de serialización JSON
-            install(JsonFeature) {
-                serializer = KotlinxSerializer()
-            }
-        }
-        // Hacemos la solicitud GET utilizando el cliente
-        val response = client.get<MyData>("https://ejemplo.com/api/data")
-        // Procesamos la respuesta
-        // ...
     }
-    // Creamos una data class para deserializar la respuesta JSON
-    data class MyData(val id: Int, val name: String, val age: Int)
+
+    private val gson = Gson()
+
+    suspend fun getReservas(): List<Reserva> {
+        try {
+            val response: HttpResponse = client.get("http://10.182.104.84:8080/reservas")
+            val jsonReservas = response.bodyAsText()
+            val type: Type = object : TypeToken<List<Reserva>>() {}.type
+            val reservas: List<Reserva> = gson.fromJson(jsonReservas, type)
+            return reservas
+        } catch (ex: Exception) {
+            ex.printStackTrace()
+            return emptyList()
+        }
+    }
 }
