@@ -31,6 +31,7 @@ class ReservaAdapter (private val reservas:List<Reserva>): RecyclerView.Adapter<
         position: Int,
     ) {
         val currentReserva = reservas[position]
+<<<<<<< HEAD
         holder.nombreSalaTextView.text = currentReserva.lugar
         holder.nombreCliTextView.text = currentReserva.dia
         //holder.dniTextView.text = currentReserva.dni
@@ -40,6 +41,25 @@ class ReservaAdapter (private val reservas:List<Reserva>): RecyclerView.Adapter<
         holder.fechaFinTextView.text = currentReserva.hora_fin
         holder.numPersonasTextView.text = currentReserva.num_personas.toString()
         //holder.comentarioTextView.text = currentReserva.comentario
+=======
+        holder.nombreSalaTextView.text = currentReserva.nombreSala
+        holder.nombreCliTextView.text = currentReserva.nombreCli
+        holder.dniTextView.text = currentReserva.dni
+        holder.telefonoTextView.text = currentReserva.telefono
+        holder.emailTextView.text = currentReserva.email.toString()
+        holder.fechaIniTextView.text = currentReserva.fechaIni.toString()
+        holder.fechaFinTextView.text = currentReserva.fechaFin.toString()
+        holder.numPersonasTextView.text = currentReserva.numPersonas.toString()
+        holder.comentarioTextView.text = currentReserva.comentario
+
+
+
+    }
+    override fun getItemCount() = reservas.size
+
+    fun setReservas(reservas: List<Reserva>) {
+        this.reservas = reservas
+>>>>>>> ae9bf2f2cf13b83f6835a672a3d2fe5492b9fd59
     }
 
     override fun getItemCount(): Int {
