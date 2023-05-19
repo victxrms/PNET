@@ -5,24 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.reservas.ReservasFragment">
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-    
+        android:layout_width="406dp"
+        android:layout_height="676dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPDF" />
+
     <Button
-        android:id="@+id/buttonReservar"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
+        android:id="@+id/buttonPDF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_gravity="center"
         android:layout_marginVertical="10dp"
+        android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="Reserva!"
+        android:text="Descarga el PDF"
         android:textColor="@color/white"
-        tools:layout_editor_absoluteX="143dp"
-        tools:layout_editor_absoluteY="220dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

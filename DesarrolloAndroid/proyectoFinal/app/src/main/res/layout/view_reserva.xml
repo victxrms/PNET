@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="549dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewNombreSalaR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="texto con el nombre de la sala"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textViewIDReserva"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="texto con el id de la reserva"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textViewNombreR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="texto con el nombre del cliente"
+            android:textAlignment="center"
+
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewDniR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="10dp"
+            android:text="texto con el dni del cliente"
+            android:textAlignment="center"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/textViewTelR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="10dp"
+            android:text="texto con el teléfono del cliente"
+            android:textAlignment="center"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/textViewEmailR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="10dp"
+            android:text="texto con el email del cliente"
+            android:textAlignment="center"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/textViewFechaIniR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="10dp"
+            android:text="texto con la fecha de inicio del cliente"
+            android:textAlignment="center"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/textViewFechaFinR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="10dp"
+            android:text="texto con el fecha de fin del cliente"
+            android:textAlignment="center"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/textViewNumPersonasR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="10dp"
+            android:text="texto con el num de personas"
+            android:textAlignment="center"
+
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/textViewComentarioR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="10dp"
+            android:text="texto con el comentario del cliente"
+            android:textAlignment="center"
+
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/botonedita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EDITAR" />
+
+        <Button
+            android:id="@+id/botonelimina"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ELIMINAR" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

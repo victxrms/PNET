@@ -29,6 +29,7 @@ class ApiService {
         try {
             val response: HttpResponse = client.get("http://10.182.104.84:8080/reservas")
             val jsonReservas = response.bodyAsText()
+            Log.d("LOG GETCALL", response.body())
             val type: Type = object : TypeToken<List<Reserva>>() {}.type
             val reservas: List<Reserva> = gson.fromJson(jsonReservas, type)
             return reservas
