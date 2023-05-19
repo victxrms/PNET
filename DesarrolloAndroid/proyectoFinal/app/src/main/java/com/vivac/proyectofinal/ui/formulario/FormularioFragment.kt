@@ -1,15 +1,16 @@
 package com.vivac.proyectofinal.ui.formulario
 
+import android.R
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.widget.Toast
-import androidx.fragment.app.Fragment
-import android.widget.Button
-import com.vivac.proyectofinal.R
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.DatePicker
 import android.widget.EditText
+import android.widget.ImageView
+import android.widget.Toast
+import androidx.fragment.app.Fragment
 
 
 class FormularioFragment : Fragment() {
@@ -20,17 +21,39 @@ class FormularioFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflar el layout para este Fragmento
-        val rootView = inflater.inflate(R.layout.fragment_formulario, container, false)
+        val rootView = inflater.inflate(com.vivac.proyectofinal.R.layout.fragment_formulario, container, false)
+
+        val btnMostrarDatePicker: Button = rootView.findViewById(com.vivac.proyectofinal.R.id.btnMostrarDatePicker)
+        val datePicker: DatePicker = rootView.findViewById(com.vivac.proyectofinal.R.id.EditFechaIniF)
+
+        btnMostrarDatePicker.setOnClickListener {
+            if (datePicker.visibility == View.VISIBLE) {
+                datePicker.visibility = View.GONE
+            } else {
+                datePicker.visibility = View.VISIBLE
+            }
+        }
+
+        val btnMostrarDatePickerFin: Button = rootView.findViewById(com.vivac.proyectofinal.R.id.btnDatePickerFin)
+        val datePickerFin: DatePicker = rootView.findViewById(com.vivac.proyectofinal.R.id.EditFechaFinF)
+
+        btnMostrarDatePickerFin.setOnClickListener {
+            if (datePickerFin.visibility == View.VISIBLE) {
+                datePickerFin.visibility = View.GONE
+            } else {
+                datePickerFin.visibility = View.VISIBLE
+            }
+        }
 
         // Buscar el botón en la vista inflada y asignar un ClickListener
-        val btnValidar = rootView.findViewById<Button>(R.id.btnValidar)
+        val btnValidar = rootView.findViewById<Button>(com.vivac.proyectofinal.R.id.btnValidar)
         btnValidar.setOnClickListener {
-            val nombre = rootView.findViewById<EditText>(R.id.textViewNombreF)
-            val dni = rootView.findViewById<EditText>(R.id.textViewDniF)
-            val email = rootView.findViewById<EditText>(R.id.textViewEmailF)
-            val telefono = rootView.findViewById<EditText>(R.id.textViewTelF)
-            val fechaini = rootView.findViewById<DatePicker>(R.id.textViewFechaIniF)
-            val fechafin = rootView.findViewById<DatePicker>(R.id.textViewFechaFinF)
+            val nombre = rootView.findViewById<EditText>(com.vivac.proyectofinal.R.id.textViewNombreF)
+            val dni = rootView.findViewById<EditText>(com.vivac.proyectofinal.R.id.textViewDniF)
+            val email = rootView.findViewById<EditText>(com.vivac.proyectofinal.R.id.textViewEmailF)
+            val telefono = rootView.findViewById<EditText>(com.vivac.proyectofinal.R.id.textViewTelF)
+            val fechaini = rootView.findViewById<DatePicker>(com.vivac.proyectofinal.R.id.textViewFechaIniF)
+            val fechafin = rootView.findViewById<DatePicker>(com.vivac.proyectofinal.R.id.textViewFechaFinF)
 
             fechaini.init(
                 fechaini.year,
