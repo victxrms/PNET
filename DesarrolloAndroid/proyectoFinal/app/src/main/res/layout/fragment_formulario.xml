@@ -52,6 +52,160 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewFechaIniF"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp"
+                android:text="Fecha de llegada: "
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btnMostrarDatePicker"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_marginVertical="8dp"
+                android:text="Mostrar/Ocultar"
+                android:textSize="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <DatePicker
+                android:id="@+id/EditFechaIniF"
+                android:layout_width="300dp"
+                android:layout_height="510dp"
+                android:visibility="gone"
+                android:theme="@style/DatePickerStyle" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewFechaFinF"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp"
+                android:text="Fecha de salida: "
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btnDatePickerFin"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_marginVertical="8dp"
+                android:text="Mostrar/Ocultar"
+                android:textSize="5dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <DatePicker
+                android:id="@+id/EditFechaFinF"
+                android:layout_width="300dp"
+                android:layout_height="500dp"
+                android:visibility="gone"
+                android:theme="@style/DatePickerStyle" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textViewHoraEntrada"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp"
+                android:text="Hora de entrada:"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btnTimePickerLlegada"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_marginVertical="8dp"
+                android:text="Mostrar/Ocultar"
+                android:textSize="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <TimePicker
+                android:id="@+id/EditHoraLlegadaF"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:theme="@style/TimePickerStyle" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textViewHoraSalida"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp"
+                android:text="Hora de salida:"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btnTimePickerSalida"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_marginVertical="8dp"
+                android:text="Mostrar/Ocultar"
+                android:textSize="5dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TimePicker
+                android:id="@+id/EditHoraSalida"
+                android:layout_marginVertical="8dp"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:theme="@style/TimePickerStyle" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="5dp"
             android:layout_marginVertical="12dp">
@@ -148,84 +302,6 @@
                 android:layout_marginVertical="12dp"
                 android:background="@drawable/line_shape"
                 android:inputType="phone" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/textViewFechaIniF"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="5dp"
-                android:layout_marginVertical="10dp"
-                android:text="Fecha de llegada: "
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
-
-            <Button
-                android:id="@+id/btnMostrarDatePicker"
-                android:layout_width="70dp"
-                android:layout_height="40dp"
-                android:layout_marginVertical="8dp"
-                android:text="Mostrar/Ocultar"
-                android:textSize="5dp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center">
-
-            <DatePicker
-                android:id="@+id/EditFechaIniF"
-                android:layout_width="300dp"
-                android:layout_height="510dp"
-                android:visibility="gone"
-                android:theme="@style/DatePickerStyle" />
-
-        </LinearLayout>
-
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/textViewFechaFinF"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="5dp"
-                android:layout_marginVertical="10dp"
-                android:text="Fecha de salida: "
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
-
-            <Button
-                android:id="@+id/btnDatePickerFin"
-                android:layout_width="70dp"
-                android:layout_height="40dp"
-                android:layout_marginVertical="8dp"
-                android:text="Mostrar/Ocultar"
-                android:textSize="5dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center">
-
-            <DatePicker
-                android:id="@+id/EditFechaFinF"
-                android:layout_width="300dp"
-                android:layout_height="500dp"
-                android:visibility="gone"
-                android:theme="@style/DatePickerStyle" />
 
         </LinearLayout>
 
