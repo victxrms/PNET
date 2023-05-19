@@ -35,6 +35,8 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".ui.reservas.FormularioFragment" />
+
         <receiver
             android:name=".ui.MyWidget"
             android:label="@string/app_name"

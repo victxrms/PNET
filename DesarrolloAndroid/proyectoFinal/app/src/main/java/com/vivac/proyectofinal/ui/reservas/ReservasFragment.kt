@@ -1,22 +1,28 @@
 package com.vivac.proyectofinal.ui.reservas
 
 
+
+
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import android.widget.Button
+import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+
 import com.vivac.proyectofinal.databinding.FragmentReservasBinding
 import com.vivac.proyectofinal.ui.salas.ReservaAdapter
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+
 
 class ReservasFragment : Fragment() {
 
@@ -49,6 +55,11 @@ class ReservasFragment : Fragment() {
                 recyclerView.adapter = adapter
             }
         }
+
+
+
+
+
         return root
     }
 
@@ -63,5 +74,13 @@ class ReservasFragment : Fragment() {
         val service = ApiService()
         var reservas = service.getReservas()
         return reservas
+    }
+
+    suspend private fun fetchBook(id: String): Reserva?{
+        Thread.sleep(2000)
+        Log.d("FETCH", "Función ejecutada");
+        val service = ApiService()
+        var reserva: Reserva? = service.getReservaPorId(id)
+        return reserva
     }
 }

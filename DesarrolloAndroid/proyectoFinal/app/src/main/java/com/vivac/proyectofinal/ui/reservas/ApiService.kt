@@ -8,6 +8,7 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import io.ktor.client.call.body
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
+import io.ktor.client.request.delete
 import io.ktor.client.statement.HttpResponse
 import io.ktor.client.statement.bodyAsText
 import io.ktor.client.statement.readText
@@ -36,6 +37,32 @@ class ApiService {
         } catch (ex: Exception) {
             ex.printStackTrace()
             return emptyList()
+        }
+    }
+
+    suspend fun getReservaPorId(nuevaReservaId: String): Reserva? {
+        try {
+            val url = "http://10.182.104.84:8080/reservas/$nuevaReservaId"
+            val response: HttpResponse = client.get(url)
+            val jsonReserva = response.bodyAsText()
+            Log.d("LOG GETCALL", response.body())
+            return gson.fromJson(jsonReserva, Reserva::class.java)
+        } catch (ex: Exception) {
+            ex.printStackTrace()
+            return null
+        }
+    }
+
+    suspend fun eliminaReserva(nuevaReservaId: String): String {
+        try {
+            val url = "http://10.182.104.84:8080/reservas/$nuevaReservaId"
+            val response: HttpResponse = client.delete(url)
+            val jsonReserva = response.bodyAsText()
+            Log.d("LOG GETCALL", response.body())
+            return jsonReserva
+        } catch (ex: Exception) {
+            ex.printStackTrace()
+            return "0"
         }
     }
 }

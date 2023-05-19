@@ -17,14 +17,6 @@
             android:icon="@drawable/ic_reservas"
             android:title="Mis reservas" />
         <item
-            android:id="@+id/nav_formulario"
-            android:icon="@drawable/ic_nuevareserva"
-            android:title="Añadir reserva" />
-        <item
-            android:id="@+id/nav_eliminar"
-            android:icon="@drawable/ic_eliminacion"
-            android:title="Eliminar reserva" />
-        <item
             android:id="@+id/nav_localizacion"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_localizacion" />
