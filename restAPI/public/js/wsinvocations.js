@@ -1,5 +1,5 @@
 function getAllReservas() {
-    var myUrl = "http://10.182.104.84:8080/reservas";
+    var myUrl = "http://192.168.3.58:8080/reservas";
     $.ajax({
         type: "GET",
         dataType: "json",
@@ -25,7 +25,7 @@ function getAllReservas() {
 
 
 function deleteReserva(reservaId) {
-    var myUrl ="http://127.0.0.1:8080/reservas/" + reservaId;
+    var myUrl ="http:/192.168.3.58:8080/reservas/" + reservaId;
     $.ajax({
         type: "DELETE",
         dataType: "json",
