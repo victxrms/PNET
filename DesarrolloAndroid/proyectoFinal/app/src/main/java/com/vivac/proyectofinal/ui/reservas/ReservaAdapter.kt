@@ -58,6 +58,11 @@ class ReservaAdapter (private val reservas:List<Reserva>): RecyclerView.Adapter<
         val editNumPersonasF = itemView.findViewById<EditText>(R.id.EditNumPersonasF)
         val editComentarioF = itemView.findViewById<EditText>(R.id.EditComentarioF)
 
+        val valueFIni = itemView.findViewById<TextView>(R.id.valorFechaIniF)
+        val valueFFin = itemView.findViewById<TextView>(R.id.valorFechaFinF)
+        val valueHIni = itemView.findViewById<TextView>(R.id.valorHoraEntrada)
+        val valueHFin = itemView.findViewById<TextView>(R.id.valorHoraSalida)
+
         val botonValidar = itemView.findViewById<Button>(R.id.btnValidar)
 
         val layoutprincipal = itemView.findViewById<LinearLayout>(R.id.layoutPrincipal)
@@ -95,6 +100,7 @@ class ReservaAdapter (private val reservas:List<Reserva>): RecyclerView.Adapter<
 
         //con esto metemos en el DatePicker el valor de la fecha de inicio
         val fechaInicioString = currentReserva.fecha_inicio
+        holder.valueFIni.text = currentReserva.fecha_inicio
         val formatoFecha = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
         val fechaInicio = formatoFecha.parse(fechaInicioString)
 
@@ -107,6 +113,7 @@ class ReservaAdapter (private val reservas:List<Reserva>): RecyclerView.Adapter<
 
         //con esto metemos en el DatePicker el valor de la fecha de fin
         val fechaFinString = currentReserva.fecha_fin //
+        holder.valueFFin.text = currentReserva.fecha_fin
         val fechaFin = formatoFecha.parse(fechaFinString)
 
         val fechaFinCalendar = Calendar.getInstance()
@@ -118,6 +125,7 @@ class ReservaAdapter (private val reservas:List<Reserva>): RecyclerView.Adapter<
 
         //con esto metemos en el DatePicker el valor de la hora de inicio
         val horaInicioString = currentReserva.hora_inicio
+        holder.valueHIni.text = currentReserva.hora_inicio
         val formatoHora = SimpleDateFormat("HH:mm", Locale.getDefault())
         val horaInicio = formatoHora.parse(horaInicioString)
 
@@ -133,6 +141,7 @@ class ReservaAdapter (private val reservas:List<Reserva>): RecyclerView.Adapter<
 
         //con esto metemos en el DatePicker el valor de la hora de inicio
         val horaFinString = currentReserva.hora_fin
+        holder.valueHFin.text = currentReserva.hora_fin
         val horaFinal = formatoHora.parse(horaFinString)
 
         val horaFinCalendar = Calendar.getInstance()
@@ -149,6 +158,7 @@ class ReservaAdapter (private val reservas:List<Reserva>): RecyclerView.Adapter<
         holder.editTelefonoF.setText(currentReserva.telefono)
         holder.editNumPersonasF.setText(currentReserva.num_personas)
         holder.editComentarioF.setText(currentReserva.comentario)
+
 
         val verMasButton: Button = holder.verMas
         val eliminar: Button = holder.eliminar

@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:text="Lugar "
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                
                 android:textSize="15sp"/>
 
             <Spinner
@@ -65,7 +65,7 @@
                 android:layout_marginVertical="10dp"
                 android:text="Fecha de llegada "
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                
                 android:textSize="15sp" />
 
             <Button
@@ -85,7 +85,7 @@
                 android:layout_weight="1"
                 android:text=""
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                
                 android:textSize="15sp" />
         </LinearLayout>
 
@@ -118,7 +118,7 @@
                 android:layout_marginVertical="10dp"
                 android:text="Fecha de salida "
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                
                 android:textSize="15sp" />
 
             <Button
@@ -138,7 +138,7 @@
                 android:layout_weight="1"
                 android:text=""
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                
                 android:textSize="15sp" />
 
         </LinearLayout>
@@ -168,7 +168,7 @@
                 android:layout_marginVertical="10dp"
                 android:text="Hora de entrada "
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                
                 android:textSize="15sp" />
 
             <Button
@@ -188,7 +188,7 @@
                 android:layout_weight="1"
                 android:text=""
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                
                 android:textSize="15sp" />
         </LinearLayout>
 
@@ -216,7 +216,7 @@
                 android:layout_marginVertical="10dp"
                 android:text="Hora de salida "
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                
                 android:textSize="15sp" />
 
             <Button
@@ -236,7 +236,7 @@
                 android:layout_weight="1"
                 android:text=""
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                
                 android:textSize="15sp" />
 
         </LinearLayout>
@@ -267,7 +267,7 @@
                 android:layout_height="wrap_content"
                 android:text="Nombre "
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                
                 android:textSize="15sp"/>
 
 
@@ -277,7 +277,7 @@
                 android:layout_marginVertical="4dp"
                 android:layout_width="218dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/line_shape"
+
                 android:inputType="text"
                 android:singleLine="false" />
         </LinearLayout>
@@ -294,7 +294,7 @@
                 android:layout_marginVertical="10dp"
                 android:text="DNI "
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                
                 android:textSize="15sp" />
 
             <EditText
@@ -302,7 +302,7 @@
                 android:layout_width="218dp"
                 android:layout_marginVertical="12dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/line_shape"
+
                 android:inputType="text" />
         </LinearLayout>
 
@@ -318,7 +318,7 @@
                 android:layout_marginVertical="10dp"
                 android:text="Correo electrónico "
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                
                 android:textSize="15sp" />
 
             <EditText
@@ -326,7 +326,7 @@
                 android:layout_width="218dp"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="18dp"
-                android:background="@drawable/line_shape"
+
                 android:inputType="textEmailAddress" />
 
         </LinearLayout>
@@ -343,7 +343,7 @@
                 android:layout_marginVertical="10dp"
                 android:text="Teléfono "
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                
                 android:textSize="15sp" />
 
             <EditText
@@ -351,7 +351,7 @@
                 android:layout_width="218dp"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="12dp"
-                android:background="@drawable/line_shape"
+
                 android:inputType="phone" />
 
         </LinearLayout>
@@ -368,7 +368,7 @@
                 android:layout_marginVertical="10dp"
                 android:text="Número de personas "
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                
                 android:textSize="15sp" />
 
             <EditText
@@ -377,8 +377,8 @@
                 android:digits="0123456789"
                 android:layout_width="218dp"
                 android:layout_marginVertical="18dp"
-                android:background="@drawable/line_shape"
-                android:layout_height="26dp" />
+
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
 
@@ -394,13 +394,13 @@
                 android:layout_marginVertical="10dp"
                 android:text="Comentario extra "
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                
                 android:textSize="15sp" />
 
             <EditText
                 android:id="@+id/EditComentarioF"
                 android:layout_width="218dp"
-                android:background="@drawable/line_shape"
+
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="12dp"
                 android:inputType="text" />
