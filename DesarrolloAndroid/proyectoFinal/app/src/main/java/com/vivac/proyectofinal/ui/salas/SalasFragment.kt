@@ -59,7 +59,7 @@ class SalasFragment : Fragment() {
         val btnPDF: Button = root.findViewById(com.vivac.proyectofinal.R.id.buttonPDF)
 
         btnPDF.setOnClickListener {
-            Toast.makeText(requireContext(), "PDF creado!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "Creando PDF", Toast.LENGTH_SHORT).show()
             val position = 0
             recyclerView.smoothScrollToPosition(position)
 
@@ -136,6 +136,8 @@ class SalasFragment : Fragment() {
         documento.add(imagen)
 
         documento.close()
+
+        Toast.makeText(requireContext(), "¡PDF creado!", Toast.LENGTH_SHORT).show()
     }
 
 }
