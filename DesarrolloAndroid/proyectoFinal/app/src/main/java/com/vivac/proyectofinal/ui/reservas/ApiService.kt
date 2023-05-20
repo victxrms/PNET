@@ -111,9 +111,9 @@ class ApiService {
     }
 
     @OptIn(InternalAPI::class)
-    suspend fun editaReserva(lugar: String, nombre: String, dni: String, correo: String, telefono: String, numPersonas: String, comentario: String, fInicio: String, fFin: String, hInicio: String, hFin: String): String {
+    suspend fun editaReserva(idReserva: String, lugar: String, nombre: String, dni: String, correo: String, telefono: String, numPersonas: String, comentario: String, fInicio: String, fFin: String, hInicio: String, hFin: String): String {
         try {
-            val url = "http://192.168.3.58:8080/reservas"
+            val url = "http://192.168.3.58:8080/reservas/$idReserva"
             val requestcuerpo = JsonObject().apply {
                 addProperty("lugar", lugar)
                 addProperty("dni", dni)
