@@ -109,4 +109,40 @@ class ApiService {
             return "0"
         }
     }
+
+    @OptIn(InternalAPI::class)
+    suspend fun editaReserva(lugar: String, nombre: String, dni: String, correo: String, telefono: String, numPersonas: String, comentario: String, fInicio: String, fFin: String, hInicio: String, hFin: String): String {
+        try {
+            val url = "http://192.168.3.58:8080/reservas"
+            val requestcuerpo = JsonObject().apply {
+                addProperty("lugar", lugar)
+                addProperty("dni", dni)
+                addProperty("nombre", nombre)
+                addProperty("email", correo)
+                addProperty("telefono", telefono)
+                addProperty("fecha_inicio", fInicio)
+                addProperty("fecha_fin", fFin)
+                addProperty("hora_inicio", hInicio)
+                addProperty("hora_fin", hFin)
+                addProperty("num_personas", numPersonas)
+                addProperty("comentario", comentario)
+            }
+
+            val gson = Gson()
+            val requestBody = gson.toJson(requestcuerpo)
+
+            val response: HttpResponse = client.request(url) {
+                method = HttpMethod.Put
+                headers.append(HttpHeaders.ContentType, ContentType.Application.Json.toString())
+                body = TextContent(requestBody, ContentType.Application.Json)
+            }
+
+            val jsonReserva = response.bodyAsText()
+            Log.d("LOG GETCALL", response.body())
+            return jsonReserva
+        } catch (ex: Exception) {
+            ex.printStackTrace()
+            return "0"
+        }
+    }
 }

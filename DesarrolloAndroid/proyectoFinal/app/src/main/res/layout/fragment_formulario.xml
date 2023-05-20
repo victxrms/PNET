@@ -8,6 +8,7 @@
     android:layout_marginHorizontal="0dp"
     android:layout_marginVertical="0dp"
     android:orientation="vertical"
+    android:gravity="center_horizontal"
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -22,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginVertical="20dp"
+        android:gravity="center_horizontal"
         android:orientation="vertical">
 
         <LinearLayout
@@ -35,7 +37,7 @@
                 android:id="@+id/textViewSelectF"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:text="Lugar: "
+                android:text="Lugar "
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="15sp"/>
@@ -51,6 +53,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
@@ -60,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:layout_marginVertical="10dp"
-                android:text="Fecha de llegada: "
+                android:text="Fecha de llegada "
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
@@ -71,7 +74,19 @@
                 android:layout_height="40dp"
                 android:layout_marginVertical="8dp"
                 android:text="Mostrar/Ocultar"
-                android:textSize="5dp"/>
+                android:textSize="5dp" />
+
+            <TextView
+                android:id="@+id/valorFechaIniF"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp"
+                android:layout_weight="1"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -92,6 +107,7 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
+            android:gravity="center_horizontal"
             android:layout_height="wrap_content">
 
             <TextView
@@ -100,7 +116,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:layout_marginVertical="10dp"
-                android:text="Fecha de salida: "
+                android:text="Fecha de salida "
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
@@ -112,6 +128,18 @@
                 android:layout_marginVertical="8dp"
                 android:text="Mostrar/Ocultar"
                 android:textSize="5dp"/>
+
+            <TextView
+                android:id="@+id/valorFechaFinF"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp"
+                android:layout_weight="1"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
 
         </LinearLayout>
 
@@ -138,7 +166,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:layout_marginVertical="10dp"
-                android:text="Hora de entrada:"
+                android:text="Hora de entrada "
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
@@ -150,6 +178,18 @@
                 android:layout_marginVertical="8dp"
                 android:text="Mostrar/Ocultar"
                 android:textSize="5dp"/>
+
+            <TextView
+                android:id="@+id/valorHoraEntrada"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp"
+                android:layout_weight="1"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -174,7 +214,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:layout_marginVertical="10dp"
-                android:text="Hora de salida:"
+                android:text="Hora de salida "
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
@@ -186,6 +226,18 @@
                 android:layout_marginVertical="8dp"
                 android:text="Mostrar/Ocultar"
                 android:textSize="5dp"/>
+
+            <TextView
+                android:id="@+id/valorHoraSalida"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp"
+                android:layout_weight="1"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
 
         </LinearLayout>
 
@@ -207,14 +259,13 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="5dp"
-            android:layout_marginVertical="12dp">
+            >
 
             <TextView
                 android:id="@+id/textViewNombreF"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:text="Nombre: "
+                android:text="Nombre "
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="15sp"/>
@@ -241,7 +292,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:layout_marginVertical="10dp"
-                android:text="dni"
+                android:text="DNI "
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
@@ -265,7 +316,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:layout_marginVertical="10dp"
-                android:text="Correo electrónico: "
+                android:text="Correo electrónico "
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
@@ -290,7 +341,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:layout_marginVertical="10dp"
-                android:text="Teléfono"
+                android:text="Teléfono "
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
@@ -315,7 +366,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:layout_marginVertical="10dp"
-                android:text="Número de personas:"
+                android:text="Número de personas "
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
@@ -341,7 +392,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:layout_marginVertical="10dp"
-                android:text="Comentario extra:"
+                android:text="Comentario extra "
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
