@@ -213,6 +213,10 @@ class FormularioFragment : Fragment() {
                 Toast.makeText(requireActivity(), "Introduzca su dni", Toast.LENGTH_SHORT)
                     .show()
                 return@setOnClickListener
+            } else if (numPersonas.text.isEmpty()) {
+                Toast.makeText(requireActivity(), "Introduzca un numero de personas", Toast.LENGTH_SHORT)
+                    .show()
+                return@setOnClickListener
             } else if (email.text.isEmpty()) {
                 Toast.makeText(requireActivity(), "¡Introduzca su email", Toast.LENGTH_SHORT)
                     .show()

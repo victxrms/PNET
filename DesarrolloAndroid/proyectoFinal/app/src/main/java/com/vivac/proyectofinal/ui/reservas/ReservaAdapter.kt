@@ -234,33 +234,99 @@ class ReservaAdapter (private val reservas:List<Reserva>): RecyclerView.Adapter<
             }
 
             holder.botonValidar.setOnClickListener {
-                GlobalScope.launch(Dispatchers.IO) {
-                    val respuesta = editaReserva(
-                        currentReserva._id,
-                        holder.spinner.selectedItem.toString(),
-                        holder.editNombreF.text.toString(),
-                        holder.editDniF.text.toString(),
-                        holder.editEmailF.text.toString(),
-                        holder.editTelefonoF.text.toString(),
-                        holder.editNumPersonasF.text.toString(),
-                        holder.editComentarioF.text.toString(),
-                        obtenerFechaDesdeDatePicker(holder.editFechaIniF),
-                        obtenerFechaDesdeDatePicker(holder.editFechaFinF),
-                        obtenerHoraDesdeTimePicker(holder.editHoraEntrada),
-                        obtenerHoraDesdeTimePicker(holder.editHoraSalida))
 
-                    withContext(Dispatchers.Main) {
-                        val contexto = holder.itemView.context
-                        if (respuesta == "0") {
-                            Toast.makeText(holder.itemView.context, "Ha habido un error", Toast.LENGTH_SHORT).show()
-                            (contexto as Activity).recreate()
-                        }
-                        else {
-                            Toast.makeText(holder.itemView.context, "Reserva actualizada correctamente", Toast.LENGTH_SHORT).show()
-                            (contexto as Activity).recreate()
+                val contexto = holder.itemView.context
+                var formularioBien = true
+
+                if (holder.editNombreF.text.isEmpty()) {
+                    Toast.makeText(contexto, "Introduzca su nombre", Toast.LENGTH_SHORT)
+                        .show()
+                    formularioBien = false
+                    return@setOnClickListener
+                } else if (holder.editDniF.text.isEmpty()) {
+                    Toast.makeText(contexto, "Introduzca su dni", Toast.LENGTH_SHORT)
+                        .show()
+                    formularioBien = false
+                    return@setOnClickListener
+                } else if (holder.editNumPersonasF.text.isEmpty()) {
+                    Toast.makeText(contexto, "Introduzca un número de personas", Toast.LENGTH_SHORT)
+                        .show()
+                    formularioBien = false
+                    return@setOnClickListener
+                } else if (holder.editEmailF.text.isEmpty()) {
+                    Toast.makeText(contexto, "¡Introduzca su email", Toast.LENGTH_SHORT)
+                        .show()
+                    formularioBien = false
+                    return@setOnClickListener
+                } else if (holder.editTelefonoF.text.isEmpty()) {
+                    Toast.makeText(contexto, "Introduzca su teléfono", Toast.LENGTH_SHORT)
+                        .show()
+                    formularioBien = false
+                    return@setOnClickListener
+                } else if (holder.editFechaIniF.year == 0 || holder.editFechaIniF.month == 0 || holder.editFechaIniF.dayOfMonth == 0) {
+                    Toast.makeText(contexto, "Introduzca una fecha de inicio", Toast.LENGTH_SHORT
+                    ).show()
+                    formularioBien = false
+                    return@setOnClickListener
+                } else if (holder.editFechaFinF.year == 0 || holder.editFechaFinF.month == 0 || holder.editFechaFinF.dayOfMonth == 0) {
+                    Toast.makeText(
+                        contexto, "Introduzca una fecha de fin", Toast.LENGTH_SHORT
+                    ).show()
+                    formularioBien = false
+                    return@setOnClickListener
+                }
+
+                if (fechaInicio == fechaFin && horaIni >= horaFin) {
+                    Toast.makeText(
+                        contexto, "La hora de salida debe ser posterior a la hora de llegada", Toast.LENGTH_SHORT
+                    ).show()
+                    formularioBien = false
+                    return@setOnClickListener
+                }
+
+                // Verificar si la fecha de salida es anterior a la fecha de entrada
+                if (fechaFin.before(fechaInicio)) {
+                    Toast.makeText(contexto, "La fecha de salida no puede ser anterior a la fecha de entrada", Toast.LENGTH_SHORT
+                    ).show()
+                    formularioBien = false
+                    return@setOnClickListener
+                }
+
+                if (formularioBien)
+                {
+                    Toast.makeText(holder.itemView.context, "Editando reserva", Toast.LENGTH_SHORT).show()
+                    (contexto as Activity).recreate()
+                    GlobalScope.launch(Dispatchers.IO) {
+                        val respuesta = editaReserva(
+                            currentReserva._id,
+                            holder.spinner.selectedItem.toString(),
+                            holder.editNombreF.text.toString(),
+                            holder.editDniF.text.toString(),
+                            holder.editEmailF.text.toString(),
+                            holder.editTelefonoF.text.toString(),
+                            holder.editNumPersonasF.text.toString(),
+                            holder.editComentarioF.text.toString(),
+                            obtenerFechaDesdeDatePicker(holder.editFechaIniF),
+                            obtenerFechaDesdeDatePicker(holder.editFechaFinF),
+                            obtenerHoraDesdeTimePicker(holder.editHoraEntrada),
+                            obtenerHoraDesdeTimePicker(holder.editHoraSalida))
+
+                        withContext(Dispatchers.Main) {
+                            val contexto = holder.itemView.context
+                            if (respuesta == "0") {
+                                Toast.makeText(holder.itemView.context, "Ha habido un error", Toast.LENGTH_SHORT).show()
+                                (contexto as Activity).recreate()
+                            }
+                            else {
+                                Toast.makeText(holder.itemView.context, "Reserva actualizada correctamente", Toast.LENGTH_SHORT).show()
+                                (contexto as Activity).recreate()
+                            }
                         }
                     }
                 }
+
+
+
             }
 
 
