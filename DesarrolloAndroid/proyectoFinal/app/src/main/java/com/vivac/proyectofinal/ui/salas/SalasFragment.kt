@@ -62,6 +62,7 @@ class SalasFragment : Fragment() {
             Toast.makeText(requireContext(), "Creando PDF", Toast.LENGTH_SHORT).show()
             val position = 0
             recyclerView.smoothScrollToPosition(position)
+            Toast.makeText(requireContext(), "¡PDF creado!", Toast.LENGTH_SHORT).show()
 
             recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
                 override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
@@ -81,6 +82,7 @@ class SalasFragment : Fragment() {
             })
 
         }
+
 
         return root
     }
@@ -137,7 +139,7 @@ class SalasFragment : Fragment() {
 
         documento.close()
 
-        Toast.makeText(requireContext(), "¡PDF creado!", Toast.LENGTH_SHORT).show()
+
     }
 
 }
