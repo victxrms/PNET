@@ -26,4 +26,27 @@
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="muestraoculta">Mostrar/Ocultar</string>
+    <string name="horasalidatexto">"Hora de salida "</string>
+    <string name="horaentradatexto">"Hora de entrada "</string>
+    <string name="fechasalidatexto">"Fecha de salida "</string>
+    <string name="fechallegadatexto">"Fecha de llegada "</string>
+    <string name="nombretexto">"Nombre "</string>
+    <string name="dnitexto">"DNI "</string>
+    <string name="emailtexto">"Correo electrónico "</string>
+    <string name="telefonotexto">"Teléfono "</string>
+    <string name="numpersonastexto">"Número de personas "</string>
+    <string name="comentariotexto">"Comentario extra "</string>
+    <string name="creanuevareserva">Crea una nueva reserva</string>
+    <string name="hechoporvivac">Hecho por VIVAC Company ©</string>
+    <string name="descargapdf">Descarga el PDF</string>
+    <string name="instalaciontexto">Instalación</string>
+    <string name="disponibletexto">Disponible</string>
+    <string name="aguatexto">Agua corriente</string>
+    <string name="sitexto">Sí</string>
+    <string name="luztexto">Luz</string>
+    <string name="piscinatexto">Piscina</string>
+    <string name="sombratexto">Sombra</string>
+    <string name="editartexto">EDITAR</string>
+    <string name="eliminartexto">ELIMINAR</string>
 </resources>

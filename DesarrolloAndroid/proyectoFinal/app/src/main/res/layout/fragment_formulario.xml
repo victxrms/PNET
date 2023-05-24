@@ -67,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:layout_marginVertical="10dp"
-                android:text="Fecha de llegada "
+                android:text="@string/fechallegadatexto"
                 android:textAlignment="center"
 
                 android:textSize="15sp" />
@@ -77,8 +77,8 @@
                 android:layout_width="70dp"
                 android:layout_height="40dp"
                 android:layout_marginVertical="8dp"
-                android:text="Mostrar/Ocultar"
-                android:textSize="5dp" />
+                android:text="@string/muestraoculta"
+                android:textSize="5sp" />
 
             <TextView
                 android:id="@+id/valorFechaIniF"
@@ -120,7 +120,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:layout_marginVertical="10dp"
-                android:text="Fecha de salida "
+                android:text="@string/fechasalidatexto"
                 android:textAlignment="center"
 
                 android:textSize="15sp" />
@@ -130,8 +130,8 @@
                 android:layout_width="70dp"
                 android:layout_height="40dp"
                 android:layout_marginVertical="8dp"
-                android:text="Mostrar/Ocultar"
-                android:textSize="5dp"/>
+                android:text="@string/muestraoculta"
+                android:textSize="5sp"/>
 
             <TextView
                 android:id="@+id/valorFechaFinF"
@@ -170,7 +170,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:layout_marginVertical="10dp"
-                android:text="Hora de entrada "
+                android:text="@string/horaentradatexto"
                 android:textAlignment="center"
 
                 android:textSize="15sp" />
@@ -180,12 +180,12 @@
                 android:layout_width="70dp"
                 android:layout_height="40dp"
                 android:layout_marginVertical="8dp"
-                android:text="Mostrar/Ocultar"
-                android:textSize="5dp"/>
+                android:text="@string/muestraoculta"
+                android:textSize="5sp"/>
 
             <TextView
                 android:id="@+id/valorHoraEntrada"
-                android:layout_width="120dp"
+                android:layout_width="120sp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:layout_marginVertical="10dp"
@@ -218,7 +218,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:layout_marginVertical="10dp"
-                android:text="Hora de salida "
+                android:text="@string/horasalidatexto"
                 android:textAlignment="center"
 
                 android:textSize="15sp" />
@@ -228,8 +228,8 @@
                 android:layout_width="70dp"
                 android:layout_height="40dp"
                 android:layout_marginVertical="8dp"
-                android:text="Mostrar/Ocultar"
-                android:textSize="5dp"/>
+                android:text="@string/muestraoculta"
+                android:textSize="5sp"/>
 
             <TextView
                 android:id="@+id/valorHoraSalida"
@@ -268,7 +268,7 @@
                 android:id="@+id/textViewNombreF"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:text="Nombre "
+                android:text="@string/nombretexto"
                 android:textAlignment="center"
 
                 android:textSize="15sp" />
@@ -294,7 +294,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:layout_marginVertical="9dp"
-                android:text="DNI "
+                android:text="@string/dnitexto"
                 android:textAlignment="center"
 
                 android:textSize="15sp" />
@@ -317,7 +317,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:layout_marginVertical="4dp"
-                android:text="Correo electrónico "
+                android:text="@string/emailtexto"
                 android:textAlignment="center"
 
                 android:textSize="15sp" />
@@ -342,7 +342,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:layout_marginVertical="10dp"
-                android:text="Teléfono "
+                android:text="@string/telefonotexto"
                 android:textAlignment="center"
 
                 android:textSize="15sp" />
@@ -367,7 +367,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:layout_marginVertical="6dp"
-                android:text="Número de personas "
+                android:text="@string/numpersonastexto"
                 android:textAlignment="center"
 
                 android:textSize="15sp" />
@@ -393,7 +393,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:layout_marginVertical="8dp"
-                android:text="Comentario extra "
+                android:text="@string/comentariotexto"
                 android:textAlignment="center"
 
                 android:textSize="15sp" />
@@ -413,8 +413,8 @@
             android:layout_height="40dp"
             android:layout_gravity="center|center_horizontal|center_vertical"
             android:layout_marginVertical="18dp"
-            android:text="Crea una nueva reserva"
-            android:textSize="10dp" />
+            android:text="@string/creanuevareserva"
+            android:textSize="10sp" />
 
     </LinearLayout>
 

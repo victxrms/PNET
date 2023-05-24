@@ -26,7 +26,7 @@
         android:layout_marginVertical="10dp"
         android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="Descarga el PDF"
+        android:text="@string/descargapdf"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

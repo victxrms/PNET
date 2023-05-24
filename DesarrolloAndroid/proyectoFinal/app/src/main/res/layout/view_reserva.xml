@@ -119,13 +119,13 @@
             android:id="@+id/botonedita"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="EDITAR" />
+            android:text="@string/editartexto" />
 
         <Button
             android:id="@+id/botonelimina"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ELIMINAR" />
+            android:text="@string/eliminartexto" />
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>
